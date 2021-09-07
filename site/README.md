@@ -32,3 +32,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  
+
+# Setup
+
+1. yarn create next-app --typescript
+2. npm install sass
+3. npx sb init
+4. yarn add -D @storybook/preset-scss css-loader sass sass-loader style-loader
+5. Add to /.storybook/main.js:
+    Addon :'@storybook/preset-scss' 
+6. npm i style-loader@^2.0.0 -D
+7. npm i sass-loader@^10.1.1 -D
+8. npm i css-loader@^5 -D

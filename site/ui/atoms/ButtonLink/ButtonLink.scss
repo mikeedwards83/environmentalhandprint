@@ -1,0 +1,10 @@
+@import "./../../../styles/Include.scss";
+
+.btn {
+    &.btn-primary {
+        @include button-variant($white, $brand-lg, $brand-lg)
+    }
+    &.btn-primary-white {
+        @include button-variant($white, $brand-lg, $white)
+    }
+}

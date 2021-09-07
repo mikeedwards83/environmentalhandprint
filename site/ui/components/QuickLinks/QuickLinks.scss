@@ -1,0 +1,36 @@
+@import "./../../../styles/Include.scss";
+
+.quickLinks {
+    background-color: $brand-lg;
+    color: white;
+
+    h4 {
+        color: white;
+    }
+    .quickLinks-link {
+        border-right: solid $white 1px;
+        padding: 1rem;
+
+        &:first-of-type {
+            border-left: solid $white 1px;
+        }
+        p{
+            padding-bottom: 2rem;
+        }
+
+        .btn {
+            position: absolute;
+            bottom: 1rem;
+            display: block;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 1rem;
+            bottom: .5rem;
+            display: block;
+        }
+    }
+}

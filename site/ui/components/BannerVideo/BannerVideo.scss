@@ -1,0 +1,55 @@
+@import "./../../../styles/Include.scss";
+
+.bannerVideo {
+    height: 360px;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-bottom: 1px solid $white;
+    position: relative;
+
+    .bannerVideo-image {
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .bannerVideo-video {
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+    }
+    .bannerVideo-text {
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        h1{
+            color: $white;
+            font-weight: bold;
+        }
+        h2{
+            color:$white;
+        }
+
+        .bannerVideo-text-container{
+            border-left:10px solid $brand-lg;
+            padding: 10px;
+
+        }
+    }
+}
