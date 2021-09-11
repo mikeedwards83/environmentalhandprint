@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ButtonLink, ButtonLinkType } from "../../atoms/ButtonLink/ButtonLink";
 import useDimension from "../../hooks/useDimension";
 import { useWindowSize } from "../../hooks/useWindowSize";
+import { ILink } from "../../interfaces/ILink";
 import "./BannerVideo.scss"
 
 export const BannerVideo = (props: {
@@ -9,11 +10,10 @@ export const BannerVideo = (props: {
     videoId: string
     title: string,
     subTitle: string
-    buttonUrl: string,
-    buttonText: string
+    button?:ILink
 }) => {
 
-    const { videoImage, videoId, title, subTitle, buttonUrl, buttonText } = props;
+    const { videoImage, videoId, title, subTitle, button} = props;
 
     const [videoUrl, setVideoUrl] = useState<string>();
     const screenSize = useWindowSize();
@@ -84,8 +84,8 @@ export const BannerVideo = (props: {
                         </h2>
                     }
 
-                    {buttonText && buttonUrl &&
-                        <ButtonLink text={buttonText} url={buttonUrl} type={ButtonLinkType.Primary} />
+                    {button  &&
+                        <ButtonLink link={button} type={ButtonLinkType.Primary} />
                     }
 
                 </div>

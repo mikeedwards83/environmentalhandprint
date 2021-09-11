@@ -5,36 +5,44 @@ import { TextImage, TextImageSide } from "../../components/TextImage/TextImage"
 import book from './../../components/QuickLinks/assets/Book1.svg'
 import textImage from './../../components/TextImage/Assets/Image.jpg'
 import videoImage from './../../components/BannerVideo/Assets/VideoThumb.jpg'
-
+import { PageFooter } from "../../components/PageFooter/PageFooter"
 
 export const HomePage = (props: {}) => {
 
     const quicklinks = {
         links: [{
             imageUrl: book,
-            linkText: "Learn More",
-            linkUrl: "http://test.com",
+            link: {
+                text: "Learn More",
+                url: "http://test.com"
+            },
             text: "Become planet positive, plant trees and reduce your footprint.",
             title: "Personal Subscription"
         },
         {
             imageUrl: book,
-            linkText: "Learn More",
-            linkUrl: "http://test.com",
+            link: {
+                text: "Learn More",
+                url: "http://test.com"
+            },
             text: "Become planet positive, plant trees and reduce your footprint.",
             title: "Personal Subscription"
         },
         {
             imageUrl: book,
-            linkText: "Learn More",
-            linkUrl: "http://test.com",
+            link: {
+                text: "Learn More",
+                url: "http://test.com"
+            },
             text: "Become planet positive, plant trees and reduce your footprint.",
             title: "Personal Subscription"
         },
         {
             imageUrl: book,
-            linkText: "Learn More",
-            linkUrl: "http://test.com",
+            link: {
+                text: "Learn More",
+                url: "http://test.com"
+            },
             text: "Become planet positive, plant trees and reduce your footprint.",
             title: "Personal Subscription"
         },
@@ -70,6 +78,55 @@ export const HomePage = (props: {}) => {
         </>
     }
 
+    const footer = {
+        links1: [
+            {
+                text: "Link 1",
+                url: "http://test,com"
+            },
+            {
+                text: "Link 1",
+                url: "http://test,com"
+            },
+            {
+                text: "Link 1",
+                url: "http://test,com"
+            }
+            , {
+                text: "Link 1",
+                url: "http://test,com"
+            }
+        ],
+        links2: [
+            {
+                text: "Link 1",
+                url: "http://test,com"
+            },
+            {
+                text: "Link 1",
+                url: "http://test,com"
+            },
+            {
+                text: "Link 1",
+                url: "http://test,com"
+            }
+            , {
+                text: "Link 1",
+                url: "http://test,com"
+            }
+        ],
+        copyRight: "© 2021 - Environmental Handprint, All Rights Reserved",
+        instagram: {
+            url: "http://"
+        },
+        facebook: {
+            url: "http://"
+        },
+        twitter: {
+            url: "http://"
+        }
+    };
+
     return (
         <div>
             <PageHeader
@@ -81,8 +138,10 @@ export const HomePage = (props: {}) => {
                 videoImage={videoImage as any}
                 subTitle="Make a positive impact"
                 title="Environmental Handprint"
-                buttonText="Findout More"
-                buttonUrl="http://test.com"
+                button={{
+                    text: "Findout More",
+                    url: "http://test.com"
+                }}
             />
             <QuickLinks
                 {...quicklinks}
@@ -94,7 +153,9 @@ export const HomePage = (props: {}) => {
                 <TextImage
                     {...block2}
                 />
+
             </div>
+            <PageFooter {...footer} />
         </div>
     )
 }

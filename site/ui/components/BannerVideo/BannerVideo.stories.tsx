@@ -14,11 +14,13 @@ const Template: ComponentStory<typeof BannerVideo> = (args) => <BannerVideo {...
 
 export const Default = Template.bind({});
 Default.args = {
-  videoId:"489517523",
-  videoImage:image as any,
-  subTitle:"Make a positive impact",
-  title:"Environmental Handprint",
-  buttonText:"Findout More",
-  buttonUrl: "http://test.com"
+  videoId: "489517523",
+  videoImage: image as any,
+  subTitle: "Make a positive impact",
+  title: "Environmental Handprint",
+  button: {
+    text: "Findout More",
+    url: "http://test.com"
+  }
 };
 

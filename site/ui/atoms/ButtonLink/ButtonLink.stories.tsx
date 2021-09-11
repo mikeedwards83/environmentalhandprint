@@ -13,8 +13,10 @@ const Template: ComponentStory<typeof ButtonLink> = (args) => <ButtonLink {...ar
 
 export const Default = Template.bind({});
 Default.args = {
-  text: "Click Me",
-  url: "http://test.com",
-  type:ButtonLinkType.Primary
+  link: {
+    text: "Click Me",
+    url: "http://test.com",
+  },
+  type: ButtonLinkType.Primary
 };
 

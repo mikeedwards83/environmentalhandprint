@@ -2,13 +2,13 @@ import { ButtonLink, ButtonLinkSize, ButtonLinkType } from '../../atoms/ButtonLi
 import './QuickLinks.scss'
 import aos from './../../../public/scripts/aos';
 import { useEffect } from 'react';
+import { ILink } from '../../interfaces/ILink';
 
 
 export interface IQuickLink {
     title: string,
     text: string,
-    linkUrl: string,
-    linkText: string,
+    link: ILink,
     imageUrl: string,
 }
 export const QuickLinks = (props: { links: IQuickLink[] }) => {
@@ -50,7 +50,7 @@ const QuickLink = (props: { link: IQuickLink }) => {
                     {link.text}
                 </p>
                 <div>
-                    <ButtonLink size={ButtonLinkSize.Small} type={ButtonLinkType.PrimaryWhite} text={link.linkText} url={link.linkUrl} />
+                    <ButtonLink size={ButtonLinkSize.Small} type={ButtonLinkType.PrimaryWhite} link={link.link} />
                 </div>
             </div>
         </div>

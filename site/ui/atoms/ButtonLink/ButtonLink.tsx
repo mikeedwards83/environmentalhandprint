@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { ILink } from "../../interfaces/ILink";
 import './ButtonLink.scss'
 
 export enum ButtonLinkType {
@@ -12,9 +13,9 @@ export enum ButtonLinkSize {
 }
 
 export const ButtonLink = (
-    props: { text: string, url: string, type?: ButtonLinkType, size?: ButtonLinkSize }) => {
+    props: { link: ILink, type?: ButtonLinkType, size?: ButtonLinkSize }) => {
 
-    const { text, url, type= ButtonLinkType.Primary, size=ButtonLinkSize.Normal } = props;
+    const { link, type= ButtonLinkType.Primary, size=ButtonLinkSize.Normal } = props;
     const [typeClass, setTypeClass] = useState("btn-primary");
     const [sizeClass, setSizeClass] = useState("");
 
@@ -52,7 +53,7 @@ export const ButtonLink = (
     }, [size])
 
     return (
-        <a href={url} className={`btn ${typeClass} ${sizeClass}`}> {text}</a>
+        <a href={link.url} className={`btn ${typeClass} ${sizeClass}`}> {link.text}</a>
     )
 
 }
