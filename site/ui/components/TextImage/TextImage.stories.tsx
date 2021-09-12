@@ -2,6 +2,8 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TextImage, TextImageSide } from './TextImage';
 import image from './Assets/Image.jpg'
+import './TextImage.scss'
+
 
 export default {
   title: 'Components/TextImage',

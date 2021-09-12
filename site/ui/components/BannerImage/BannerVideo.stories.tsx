@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { BannerImage } from './BannerImage';
-
+import './BannerImage.scss'
 
 
 export default {

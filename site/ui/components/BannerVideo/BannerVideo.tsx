@@ -3,7 +3,6 @@ import { ButtonLink, ButtonLinkType } from "../../atoms/ButtonLink/ButtonLink";
 import useDimension from "../../hooks/useDimension";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { ILink } from "../../interfaces/ILink";
-import "./BannerVideo.scss"
 
 export const BannerVideo = (props: {
     videoImage: string,

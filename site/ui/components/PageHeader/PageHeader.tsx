@@ -1,4 +1,3 @@
-import styles from "./PageHeader.scss"
 export const PageHeader = (props:{
     logo:string,
     title:string,

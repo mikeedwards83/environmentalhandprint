@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ButtonLink, ButtonLinkType } from './ButtonLink';
-
+import './ButtonLink.scss'
 
 
 export default {

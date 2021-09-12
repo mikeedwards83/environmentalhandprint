@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { PageHeader } from './PageHeader';
 
+import  "./PageHeader.scss"
 
 
 export default {

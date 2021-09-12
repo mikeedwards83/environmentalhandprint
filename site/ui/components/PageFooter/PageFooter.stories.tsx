@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { PageFooter } from './PageFooter';
+import './PageFooter.scss'
 
 
 

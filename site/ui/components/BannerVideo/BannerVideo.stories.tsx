@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { BannerVideo } from './BannerVideo';
 import image from "./Assets/VideoThumb.jpg"
+import "./BannerVideo.scss"
 
 
 

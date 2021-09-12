@@ -20,6 +20,8 @@ const Home: NextPage = () => {
         <script defer={true} data-search-pseudo-elements async src="https://kit.fontawesome.com/89403bae8e.js" crossOrigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Poppins&display=swap" rel="stylesheet" />
         <script src="/scripts/aos.js"></script>
+
+        
       </Head>
 
       <main className={styles.main}>

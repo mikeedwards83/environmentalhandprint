@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import './TextImage.scss'
 
 export enum TextImageSide {
     ImageLeft,

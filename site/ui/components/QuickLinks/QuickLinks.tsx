@@ -1,5 +1,4 @@
 import { ButtonLink, ButtonLinkSize, ButtonLinkType } from '../../atoms/ButtonLink/ButtonLink'
-import './QuickLinks.scss'
 import aos from './../../../public/scripts/aos';
 import { useEffect } from 'react';
 import { ILink } from '../../interfaces/ILink';
