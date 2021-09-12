@@ -1,0 +1,13 @@
+@import "./../../../styles/Include.scss";
+
+.Logos{
+    img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .slick-prev, .slick-next{
+        width:20px !important;
+        color:$brand-dg;
+    }
+}
