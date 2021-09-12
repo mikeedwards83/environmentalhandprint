@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "plop": "plop"
   },
   "dependencies": {
     "next": "11.1.2",
@@ -28,6 +29,7 @@
     "css-loader": "^5.2.7",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
+    "plop": "^2.7.4",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
     "typescript": "4.4.2"

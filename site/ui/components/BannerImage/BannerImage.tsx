@@ -1,5 +1,4 @@
 import { ReactNode } from "react"
-import './BannerImage.scss'
 
 export const BannerImage = (props: { title: string | ReactNode, imageUrl: string }) => {
 
