@@ -62,11 +62,11 @@ export const PageFooter = (props: {
                                     <div className="text-center">
                                         <p>{copyRight}</p>
                                     </div>
-                                    <div className="text-center">
-                                        {instagram && <Link link={instagram} target="_blank" className="mx-2 tt-instagram"><i className="fab fa-instagram"></i></Link>}
-                                        {twitter && <Link link={twitter} target="_blank" className="mx-2 tt-twitter"><i className="fab fa-twitter"></i></Link>}
-                                        {facebook && <Link link={facebook} target="_blank" className="mx-2 tt-facebook"><i className="fab fa-facebook"></i></Link>}
-                                        {youtube && <Link link={youtube} target="_blank" className="mx-2 tt-facebook"><i className="fab fa-youtube"></i></Link>}
+                                    <div className="text-center PageFooter-SocialMedia">
+                                        {instagram && <Link link={instagram} target="_blank" className="mx-2"><i className="fab fa-instagram"></i></Link>}
+                                        {twitter && <Link link={twitter} target="_blank" className="mx-2 "><i className="fab fa-twitter"></i></Link>}
+                                        {facebook && <Link link={facebook} target="_blank" className="mx-2 "><i className="fab fa-facebook"></i></Link>}
+                                        {youtube && <Link link={youtube} target="_blank" className="mx-2 "><i className="fab fa-youtube"></i></Link>}
                                     </div>
 
                                 </div>

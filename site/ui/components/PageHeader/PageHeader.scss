@@ -1,7 +1,46 @@
-@import './../../../styles/Include.scss';
+@import "./../../../styles/Include.scss";
 
-.navbar{
-    border-bottom: $brand-lg solid 1px;
+.PageHeader {
+    .navbar {
+        border-bottom: $brand-lg solid 1px;
+    }
+    .side-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        z-index: 15;
+        background-color: #fff;
+        width: 260px;
+        transition: ease-out 1s;
+        border-left: #93c13e solid 1px;
 
-    
-} 
+        &.collapsed {
+            margin-right: -260px;
+        }
+
+        .side-nav-container {
+            overflow-y: auto;
+            height: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .navbar-nav a {
+            color: $brand-dg;
+            &:hover{
+                color: $brand-lg;
+            }
+        }
+        .nav-link svg {
+            width: 25px !important;
+            display: inline-block;
+        }
+
+        hr {
+            border-top: #93c13e 1px solid;
+            width: 100%;
+        }
+    }
+}

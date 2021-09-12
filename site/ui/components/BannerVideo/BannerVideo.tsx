@@ -49,12 +49,13 @@ export const BannerVideo = (props: {
 
         if (dH > 0) {
             margin = dH / 2 * -1;
+            console.log("here", margin)
         }
 
         setVideoDimensions({
             height: sH,
             width: sW,
-            margin: dH
+            margin: margin
         })
 
     }, [height, width])
