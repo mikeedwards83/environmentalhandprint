@@ -1,31 +1,32 @@
-import { useEffect, useState } from "react"
+import { ReactNode, useEffect, useState } from "react"
 import { ILink } from "../../interfaces/ILink";
-import './ButtonLink.scss'
 
-export enum ButtonLinkType {
-    Primary,
-    PrimaryWhite
-}
-export enum ButtonLinkSize {
-    Small,
-    Normal,
-    Large
-}
+
+
 
 export const ButtonLink = (
-    props: { link: ILink, type?: ButtonLinkType, size?: ButtonLinkSize }) => {
+    props: {
+        url: string,
+        type?: "Primary" | "PrimaryWhite" | "Secondary",
+        size?: "Small" | "Normal" | "Large",
+        children: ReactNode,
 
-    const { link, type= ButtonLinkType.Primary, size=ButtonLinkSize.Normal } = props;
+    }) => {
+
+    const { url, children, type = "Primary", size = "Normal" } = props;
     const [typeClass, setTypeClass] = useState("btn-primary");
     const [sizeClass, setSizeClass] = useState("");
 
     useEffect(() => {
         switch (type) {
-            case ButtonLinkType.Primary:
+            case "Primary":
                 setTypeClass("btn-primary");
                 break;
-            case ButtonLinkType.PrimaryWhite:
+            case "PrimaryWhite":
                 setTypeClass("btn-primary-white");
+                break;
+            case "Secondary":
+                setTypeClass("btn-secondary");
                 break;
             default:
                 setTypeClass("btn-primary");
@@ -36,13 +37,13 @@ export const ButtonLink = (
 
     useEffect(() => {
         switch (size) {
-            case ButtonLinkSize.Small:
+            case "Small":
                 setSizeClass("btn-sm");
                 break;
-            case ButtonLinkSize.Normal:
+            case "Normal":
                 setSizeClass("");
                 break;
-            case ButtonLinkSize.Large:
+            case "Large":
                 setSizeClass("btn-lg");
                 break;
             default:
@@ -53,7 +54,7 @@ export const ButtonLink = (
     }, [size])
 
     return (
-        <a href={link.url} className={`btn ${typeClass} ${sizeClass}`}> {link.text}</a>
+        <a href={url} className={`btn ${typeClass} ${sizeClass}`}> {children}</a>
     )
 
 }

@@ -1,0 +1,15 @@
+@import "./../../../styles/Include.scss";
+
+.BlogList{
+    .BlogList-Item{
+        align-items: center;
+        img{
+            max-width: 100px;
+            border-radius: 5px;
+        }
+        padding-bottom: 2rem;
+        border-bottom: $brand-dg solid 1px;
+        margin: 1rem;
+    }
+
+}

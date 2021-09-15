@@ -1,1 +1,9 @@
 @import "./../../../styles/Include.scss";
+
+.Link {
+    &.Link-NoDecor {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

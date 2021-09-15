@@ -7,4 +7,12 @@
     &.btn-primary-white {
         @include button-variant($white, $brand-lg, $white)
     }
+
+    &.btn-secondary {
+        @include button-variant($white, $brand-dg, $brand-dg)
+    }
+    &.btn-link{
+        color: $brand-lg;
+    }
+    
 }

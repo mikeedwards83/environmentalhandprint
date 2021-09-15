@@ -68,19 +68,13 @@ export const PageHeader = (props: {
                             <i className="fas fa-times tt-fg-primary-dark"></i>
                         </Button>
                     </div>
-                    <div className="text-center">
-                        <a href="https://app.myforest.earth/login?returnUrl=/sc/forest" className="btn tt-btn-primary-light"><i className="fa fa-trees"></i> Login</a>
-                        <a href="https://app.myforest.earth/signup" className="btn tt-btn-primary-dark "><i className="fa fa-acorn"></i> Join Now</a>
-                    </div>
-
+                 
                     <ul className="navbar-nav ml-auto">
-                        <hr />
 
                         <li className="nav-item pr-3">
-                            <a className="nav-link" href="https://app.myforest.earth/search">
+                            <a className="nav-link" href="/blog">
                                 <i className="fad fa-trees  "> </i>
-
-                                Find A Friend
+                                Blog
                             </a>
                         </li>
                         <li className="nav-item pr-3">

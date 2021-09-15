@@ -1,0 +1,15 @@
+@import "./../../../styles/Include.scss";
+
+.Blog{
+
+    img{
+        display: block;
+        margin: auto;
+    }
+
+    .Blog-Content{
+        h1{
+            display: none;
+        }
+    }
+}

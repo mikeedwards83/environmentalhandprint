@@ -1,4 +1,4 @@
-import { ButtonLink, ButtonLinkSize, ButtonLinkType } from '../../atoms/ButtonLink/ButtonLink'
+import { ButtonLink} from '../../atoms/ButtonLink/ButtonLink'
 import aos from './../../../public/scripts/aos';
 import { useEffect } from 'react';
 import { ILink } from '../../interfaces/ILink';
@@ -49,7 +49,7 @@ const QuickLink = (props: { link: IQuickLink }) => {
                     {link.text}
                 </p>
                 <div>
-                    <ButtonLink size={ButtonLinkSize.Small} type={ButtonLinkType.PrimaryWhite} link={link.link} />
+                    <ButtonLink size={"Small"} type={"PrimaryWhite"} url={link.link.url}>{link.link.text}</ButtonLink>
                 </div>
             </div>
         </div>

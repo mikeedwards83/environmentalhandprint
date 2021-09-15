@@ -52,7 +52,7 @@ export const Button = (props: { text?: string, children?:ReactNode, className?:s
 
 
     return (
-        <button className={`btn ${typeClass} ${sizeClass} ${className}`} title={title} onClick={onClick}> 
+        <button className={`Button btn ${typeClass} ${sizeClass} ${className}`} title={title} onClick={onClick}> 
             {text} {children}
         </button>
     )

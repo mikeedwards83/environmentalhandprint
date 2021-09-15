@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ButtonLink, ButtonLinkType } from "../../atoms/ButtonLink/ButtonLink";
+import { ButtonLink } from "../../atoms/ButtonLink/ButtonLink";
 import useDimension from "../../hooks/useDimension";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { ILink } from "../../interfaces/ILink";
@@ -85,7 +85,7 @@ export const BannerVideo = (props: {
                     }
 
                     {button  &&
-                        <ButtonLink link={button} type={ButtonLinkType.Primary} />
+                        <ButtonLink url={button.url} type={"Primary"} >{button.text}</ButtonLink>
                     }
 
                 </div>

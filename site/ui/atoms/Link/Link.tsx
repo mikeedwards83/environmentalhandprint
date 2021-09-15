@@ -1,15 +1,14 @@
 import { ReactNode, useEffect, useState } from "react"
 import { ILink } from "../../interfaces/ILink";
-import './Link.scss'
 
 
 
 export const Link = (
-    props: { link: ILink, className?: string, children?:ReactNode, target?:string }) => {
-
-    const { link, className = "", children } = props;
+    props: { url: string, className?: string, children?:ReactNode, target?:string, noDecoration?:boolean}) => {
+    const { url, className = "", children ,noDecoration} = props;
 
     return (
-        <a href={link.url} className={`${className}`}> {link.text} {children}</a>
+        <a href={url} className={` Link ${className} ${noDecoration? "Link-NoDecor" :""}`}>  {children}</a>
     )
 }
+

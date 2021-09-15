@@ -23,8 +23,8 @@ export const PageFooter = (props: {
                         <div className="d-none d-md-flex col-md-4">
                             <ul className="list-group list-group-flush w-100">
                                 {links1.map(x =>
-                                    <li className="list-group-item">
-                                        <Link link={x} />
+                                    <li key={x.url} className="list-group-item">
+                                        <Link url={x.url}>{x.text}</Link>
                                     </li>)}
                             </ul>
                         </div>
@@ -33,8 +33,9 @@ export const PageFooter = (props: {
 
                             <ul className="list-group list-group-flush w-100">
                                 {links2.map(x =>
-                                    <li className="list-group-item">
-                                        <Link link={x} />
+                                    <li key={x.url} className="list-group-item">
+                                        <Link url={x.url}>{x.text}</Link>
+
                                     </li>)}
 
                             </ul>
@@ -42,12 +43,14 @@ export const PageFooter = (props: {
                         <div className="col-12 d-md-none text-center pb-4">
                             <ul className="list-group list-group-flush">
                                 {links1.map(x =>
-                                    <li className="list-group-item">
-                                        <Link link={x} />
+                                    <li key={x.url} className="list-group-item">
+                                        <Link url={x.url}>{x.text}</Link>
+
                                     </li>)}
                                 {links2.map(x =>
-                                    <li className="list-group-item">
-                                        <Link link={x} />
+                                    <li key={x.url} className="list-group-item">
+                                        <Link url={x.url}>{x.text}</Link>
+
                                     </li>)}
 
                             </ul>
@@ -63,10 +66,10 @@ export const PageFooter = (props: {
                                         <p>{copyRight}</p>
                                     </div>
                                     <div className="text-center PageFooter-SocialMedia">
-                                        {instagram && <Link link={instagram} target="_blank" className="mx-2"><i className="fab fa-instagram"></i></Link>}
-                                        {twitter && <Link link={twitter} target="_blank" className="mx-2 "><i className="fab fa-twitter"></i></Link>}
-                                        {facebook && <Link link={facebook} target="_blank" className="mx-2 "><i className="fab fa-facebook"></i></Link>}
-                                        {youtube && <Link link={youtube} target="_blank" className="mx-2 "><i className="fab fa-youtube"></i></Link>}
+                                        {instagram && <Link url={instagram.url} target="_blank" className="mx-2"><i className="fab fa-instagram"></i></Link>}
+                                        {twitter && <Link url={twitter.url} target="_blank" className="mx-2 "><i className="fab fa-twitter"></i></Link>}
+                                        {facebook && <Link url={facebook.url} target="_blank" className="mx-2 "><i className="fab fa-facebook"></i></Link>}
+                                        {youtube && <Link url={youtube.url} target="_blank" className="mx-2 "><i className="fab fa-youtube"></i></Link>}
                                     </div>
 
                                 </div>
