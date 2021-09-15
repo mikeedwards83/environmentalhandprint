@@ -2,7 +2,7 @@ import fs from 'fs';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { join } from 'path';
 import matter from 'gray-matter';
-import { Layout } from '../../_shared/Layout';
+import { Layout } from '../../../_shared/Layout';
 import React from 'react';
 import { Blog } from '../../../ui/components/Blog/Blog';
 import { MapBlog, POSTS_PATH } from '../[slug]';

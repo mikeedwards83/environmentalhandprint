@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { ReactNode } from "react"
-import { PageFooter } from "../../ui/components/PageFooter/PageFooter"
-import { PageHeader } from "../../ui/components/PageHeader/PageHeader"
+import { PageFooter } from "../ui/components/PageFooter/PageFooter"
+import { PageHeader } from "../ui/components/PageHeader/PageHeader"
 import Script from 'next/script'
 
 

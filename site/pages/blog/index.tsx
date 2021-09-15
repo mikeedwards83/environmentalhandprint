@@ -1,7 +1,7 @@
 import { useRouter } from "next/dist/client/router";
 import React, { useEffect } from "react"
 import { Redirect } from "../../ui/components/Redirect/Redirect";
-import { Layout } from "../_shared/Layout";
+import { Layout } from "../../_shared/Layout";
 
 const Index = () => {
 

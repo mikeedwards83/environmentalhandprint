@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import React from 'react';
 import { BlogList, IBlog } from '../../ui/components/BlogList/BlogList';
 import { convertToInt } from '../../utils/int';
-import { Layout } from '../_shared/Layout';
+import { Layout } from '../../_shared/Layout';
 import { join } from 'path';
 import matter from 'gray-matter';
 import { BannerImage } from '../../ui/components/BannerImage/BannerImage';
