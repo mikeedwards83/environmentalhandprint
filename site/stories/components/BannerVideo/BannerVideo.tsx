@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ButtonLink } from "../../atoms/ButtonLink/ButtonLink";
+import { Image } from "../../atoms/Image/Image";
 import useDimension from "../../../hooks/useDimension";
 import { useWindowSize } from "../../../hooks/useWindowSize";
 import { ILink } from "../../../ui/interfaces/ILink";
@@ -65,7 +66,7 @@ export const BannerVideo = (props: {
         <div className="bannerVideo" data-videoid={videoId} ref={videoRef}>
             <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             <div className="bannerVideo-image ">
-                <img src={videoImage} />
+                <Image src={videoImage} />
             </div>
             {videoDimensions &&
                 <div className="bannerVideo-video " style={{ marginTop: `${videoDimensions.margin}px` }} >
