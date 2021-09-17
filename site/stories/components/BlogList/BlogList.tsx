@@ -3,7 +3,7 @@ import { Button } from "../../atoms/Button/Button";
 import { ImageUnsplash } from "../../atoms/ImageUnsplash/ImageUnsplash";
 import { Link } from "../../atoms/Link/Link";
 import { Pagination } from "../../atoms/Pagination/Pagination";
-import { IImage } from "../../interfaces/IImage";
+import { IImage } from "../../../ui/interfaces/IImage";
 
 export interface IBlog {
   title: string,

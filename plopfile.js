@@ -15,17 +15,17 @@ module.exports = function (plop) {
         }],
         actions: [{
             type: 'add',
-            path: 'site/ui/{{type}}s/{{name}}/{{name}}.tsx',
+            path: 'site/stories/{{type}}s/{{name}}/{{name}}.tsx',
             templateFile: 'site/plop-templates/Component.tsx.hbs'
         },
         {
             type: 'add',
-            path: 'site/ui/{{type}}s/{{name}}/{{name}}.stories.tsx',
+            path: 'site/stories/{{type}}s/{{name}}/{{name}}.stories.tsx',
             templateFile: 'site/plop-templates/Component.stories.tsx.hbs'
         },
         {
             type: 'add',
-            path: 'site/ui/{{type}}s/{{name}}/{{name}}.scss',
+            path: 'site/stories/{{type}}s/{{name}}/{{name}}.scss',
             templateFile: 'site/plop-templates/Component.scss.hbs'
         }]
     });

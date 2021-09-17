@@ -1,6 +1,6 @@
 
 import { Link } from '../../atoms/Link/Link';
-import { ILink } from '../../interfaces/ILink'
+import { ILink } from '../../../ui/interfaces/ILink'
 
 export const PageFooter = (props: {
     links1: ILink[]

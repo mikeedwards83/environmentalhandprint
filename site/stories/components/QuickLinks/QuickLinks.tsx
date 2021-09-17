@@ -1,7 +1,7 @@
 import { ButtonLink} from '../../atoms/ButtonLink/ButtonLink'
-import aos from './../../../public/scripts/aos';
+import aos from '../../../public/scripts/aos';
 import { useEffect } from 'react';
-import { ILink } from '../../interfaces/ILink';
+import { ILink } from '../../../ui/interfaces/ILink';
 
 
 export interface IQuickLink {

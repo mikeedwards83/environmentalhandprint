@@ -4,9 +4,9 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import { Layout } from '../../../_shared/Layout';
 import React from 'react';
-import { Blog } from '../../../ui/components/Blog/Blog';
+import { Blog } from '../../../stories/components/Blog/Blog';
 import { MapBlog, POSTS_PATH } from '../[slug]';
-import { IBlog } from '../../../ui/components/BlogList/BlogList';
+import { IBlog } from '../../../stories/components/BlogList/BlogList';
 
 
 

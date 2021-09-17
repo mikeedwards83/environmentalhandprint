@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { ButtonLink } from "../../atoms/ButtonLink/ButtonLink";
-import useDimension from "../../hooks/useDimension";
-import { useWindowSize } from "../../hooks/useWindowSize";
-import { ILink } from "../../interfaces/ILink";
+import useDimension from "../../../hooks/useDimension";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { ILink } from "../../../ui/interfaces/ILink";
 
 export const BannerVideo = (props: {
     videoImage: string,

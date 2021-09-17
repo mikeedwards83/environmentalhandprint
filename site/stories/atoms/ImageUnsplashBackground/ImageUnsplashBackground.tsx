@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { Crop, Fit, unsplashUrl } from "../../../utils/unsplash";
-import useDimension from "../../hooks/useDimension";
+import useDimension from "../../../hooks/useDimension";
 
 export const ImageUnsplashBackground = (props: {
     imageUrl: string,

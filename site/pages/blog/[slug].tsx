@@ -1,12 +1,12 @@
 import fs from 'fs';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import React from 'react';
-import { BlogList, IBlog } from '../../ui/components/BlogList/BlogList';
+import { BlogList, IBlog } from '../../stories/components/BlogList/BlogList';
 import { convertToInt } from '../../utils/int';
 import { Layout } from '../../_shared/Layout';
 import { join } from 'path';
 import matter from 'gray-matter';
-import { BannerImage } from '../../ui/components/BannerImage/BannerImage';
+import { BannerImage } from '../../stories/components/BannerImage/BannerImage';
 
 export const POSTS_PATH = join(process.cwd(), '/public/articles');
 const postsPerPage = 5;

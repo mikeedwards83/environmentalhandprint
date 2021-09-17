@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, useState } from "react"
-import { ILink } from "../../interfaces/ILink";
+import { ILink } from "../../../ui/interfaces/ILink";
 
 
 
