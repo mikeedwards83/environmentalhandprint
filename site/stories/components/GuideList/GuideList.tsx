@@ -1,3 +1,5 @@
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { ReactNode } from "react"
 import { Button } from "../../atoms/Button/Button";
 import { ImageUnsplash } from "../../atoms/ImageUnsplash/ImageUnsplash";
@@ -44,7 +46,7 @@ const GuideListItem = (props: { folder: string, Guide: IGuide }) => {
           {Guide.excerpt}
         </p>
         <Button className="w-100">
-          Read <i className="fas fa-chevron-right"></i>
+          Read <FontAwesomeIcon icon={faChevronRight} />
         </Button>
       </div>
 

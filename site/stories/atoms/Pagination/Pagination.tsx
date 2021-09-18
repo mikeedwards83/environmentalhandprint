@@ -1,16 +1,18 @@
 import React, { ReactNode, useEffect, useState } from "react"
 import { ButtonLink } from "../ButtonLink/ButtonLink";
 import { Link } from "../Link/Link";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Pagination = (props: {
   pageCurrent: number,
   pagesTotal: number,
   url: string,
   nextPrev?: boolean,
-  className?:string
+  className?: string
 }) => {
 
-  const { pagesTotal, pageCurrent, url, nextPrev = true ,className=""} = props;
+  const { pagesTotal, pageCurrent, url, nextPrev = true, className = "" } = props;
 
   const [pages, setPages] = useState<Page[] | undefined>(undefined);
 
@@ -42,7 +44,9 @@ export const Pagination = (props: {
         <ol>
           {nextPrev && pageCurrent > 1 &&
             <li>
-              <ButtonLink url={createUrl(url, pageCurrent - 1)} ><i className="fas fa-chevron-left"></i></ButtonLink>
+              <ButtonLink url={createUrl(url, pageCurrent - 1)} >
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </ButtonLink>
             </li>
           }
           {pages.map(page => <li key={page.label} className={`${page.current ? "Pagination-Current" : ""}`}>
@@ -53,7 +57,9 @@ export const Pagination = (props: {
 
           {nextPrev && pageCurrent < pagesTotal &&
             <li>
-              <ButtonLink url={createUrl(url, pageCurrent + 1)} ><i className="fas fa-chevron-right"></i></ButtonLink>
+              <ButtonLink url={createUrl(url, pageCurrent + 1)} >
+                <FontAwesomeIcon icon={faChevronRight} />
+              </ButtonLink>
             </li>
           }
         </ol>

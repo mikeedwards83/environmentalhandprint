@@ -1,6 +1,8 @@
 
 import { Link } from '../../atoms/Link/Link';
 import { ILink } from '../../../ui/interfaces/ILink'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 export const PageFooter = (props: {
     links1: ILink[]
@@ -66,10 +68,14 @@ export const PageFooter = (props: {
                                         <p>{copyRight}</p>
                                     </div>
                                     <div className="text-center PageFooter-SocialMedia">
-                                        {instagram && <Link url={instagram.url} target="_blank" className="mx-2"><i className="fab fa-instagram"></i></Link>}
-                                        {twitter && <Link url={twitter.url} target="_blank" className="mx-2 "><i className="fab fa-twitter"></i></Link>}
-                                        {facebook && <Link url={facebook.url} target="_blank" className="mx-2 "><i className="fab fa-facebook"></i></Link>}
-                                        {youtube && <Link url={youtube.url} target="_blank" className="mx-2 "><i className="fab fa-youtube"></i></Link>}
+                                        {instagram && <Link url={instagram.url} target="_blank" className="mx-2">
+                                            <FontAwesomeIcon icon={faInstagram} />
+                                        </Link>}
+                                        {twitter && <Link url={twitter.url} target="_blank" className="mx-2 ">                                            <
+                                            FontAwesomeIcon icon={faTwitter} />
+                                        </Link>}
+                                        {facebook && <Link url={facebook.url} target="_blank" className="mx-2 "><FontAwesomeIcon icon={faFacebook} /></Link>}
+                                        {youtube && <Link url={youtube.url} target="_blank" className="mx-2 "><FontAwesomeIcon icon={faYoutube} /></Link>}
                                     </div>
 
                                 </div>

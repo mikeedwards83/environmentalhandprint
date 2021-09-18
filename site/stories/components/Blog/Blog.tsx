@@ -1,3 +1,5 @@
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { ReactNode } from "react"
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -22,7 +24,9 @@ export const Blog = (props: { blog: IBlog, content: string }) => {
       <div className={`Blog row`}>
         <article className="Blog-Content container" >
           <div className="col-12 col-md-8 offset-md-2 pt-3">
-            <ButtonLink url="/blog"> <i className="fas fa-chevron-left"></i> Blogs </ButtonLink>
+            <ButtonLink url="/blog">
+              <FontAwesomeIcon icon={faChevronLeft} />
+              Blogs </ButtonLink>
             <div className="pt-3">
               <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />,
             </div>

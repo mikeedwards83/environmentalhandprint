@@ -1,5 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button, ButtonType } from "../../atoms/Button/Button";
+
+import { faBars, faTimes, faTree } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const PageHeader = (props: {
     logo: string,
@@ -39,7 +42,7 @@ export const PageHeader = (props: {
 
                         <li className="nav-item text-center ">
                             <Button className="side-nav-toggler" title="Show/Hide Menu" type={ButtonType.Link} onClick={handleSideNavOpen} >
-                                <i className="fas fa-bars tt-fg-primary-dark"></i>
+                                <FontAwesomeIcon icon={faBars} />
                                 <span className="pl-2">Menu</span>
                             </Button>
 
@@ -53,7 +56,7 @@ export const PageHeader = (props: {
                     <ul className="navbar-nav ml-auto  ">
                         <li className="nav-item text-center ">
                             <Button className="side-nav-toggler" data-target="sideNav" title="Show/Hide Menu" type={ButtonType.Link}>
-                                <i className="fas fa-bars tt-fg-primary-dark"></i>
+                                <FontAwesomeIcon icon={faBars} />
                                 <span className="pl-2">Menu</span>
                             </Button>
                         </li>
@@ -65,21 +68,21 @@ export const PageHeader = (props: {
                     <div className="text-right">
 
                         <Button className="side-nav-toggler" title="Hide Menu" type={ButtonType.Link} onClick={handleSideNavClose} >
-                            <i className="fas fa-times tt-fg-primary-dark"></i>
+                            <FontAwesomeIcon icon={faTimes} />
                         </Button>
                     </div>
-                 
+
                     <ul className="navbar-nav ml-auto">
 
                         <li className="nav-item pr-3">
                             <a className="nav-link" href="/blogs">
-                                <i className="fad fa-trees  "> </i>
+                                <FontAwesomeIcon icon={faTree} />
                                 Blog
                             </a>
                         </li>
                         <li className="nav-item pr-3">
                             <a className="nav-link" href="/guides">
-                                <i className="fad fa-trees  "> </i>
+                                <FontAwesomeIcon icon={faTree} />
                                 Guides
                             </a>
                         </li>

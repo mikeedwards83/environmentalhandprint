@@ -1,3 +1,5 @@
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { ReactNode } from "react"
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -22,7 +24,7 @@ export const Guide = (props: { guide: IGuide, content: string }) => {
       <div className={`Guide row`}>
         <article className="Guide-Content container" >
           <div className="col-12 col-md-8 offset-md-2 pt-3">
-            <ButtonLink url="/guides"> <i className="fas fa-chevron-left"></i> Guides </ButtonLink>
+            <ButtonLink url="/guides"> <FontAwesomeIcon icon={faChevronLeft} /> Guides </ButtonLink>
             <div className="pt-3">
               <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />,
             </div>

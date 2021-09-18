@@ -3,7 +3,8 @@ import React, { ReactNode } from "react"
 import { PageFooter } from "../stories/components/PageFooter/PageFooter"
 import { PageHeader } from "../stories/components/PageHeader/PageHeader"
 import Script from 'next/script'
-
+import { config, dom } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 export const Layout = (props: { children?: ReactNode }) => {
 
@@ -68,7 +69,7 @@ export const Layout = (props: { children?: ReactNode }) => {
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
                 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Poppins&display=swap" rel="stylesheet" />
-
+                <style>{dom.css()}</style>
 
 
             </Head>
@@ -85,7 +86,6 @@ export const Layout = (props: { children?: ReactNode }) => {
             <Script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossOrigin="anonymous"></Script>
             <Script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossOrigin="anonymous"></Script>
 
-            <Script defer={true} data-search-pseudo-elements async src="https://kit.fontawesome.com/89403bae8e.js" crossOrigin="anonymous"></Script>
             <Script src="/scripts/aos.js"></Script>
         </>
     )
