@@ -75,13 +75,13 @@ export const PageHeader = (props: {
                     <ul className="navbar-nav ml-auto">
 
                         <li className="nav-item pr-3">
-                            <a className="nav-link" href="/blogs">
+                            <a className="nav-link" href="/blogs/1">
                                 <FontAwesomeIcon icon={faTree} />
                                 Blog
                             </a>
                         </li>
                         <li className="nav-item pr-3">
-                            <a className="nav-link" href="/guides">
+                            <a className="nav-link" href="/guides/1">
                                 <FontAwesomeIcon icon={faTree} />
                                 Guides
                             </a>

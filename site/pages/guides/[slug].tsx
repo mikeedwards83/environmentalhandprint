@@ -4,8 +4,9 @@ import { join } from 'path';
 import { ListingGetStaticPaths, ListingGetStaticProps } from '../../_shared/Slug-Listing';
 import React from 'react';
 import { BannerImage } from '../../stories/components/BannerImage/BannerImage';
-import { Layout } from '../../_shared/Layout';
 import { GuideList } from '../../stories/components/GuideList/GuideList';
+import Layout from '../../stories/components/Layout/Layout';
+import PageHead from '../../stories/components/PageHead/PageHead';
 
 
 export const POSTS_PATH = join(process.cwd(), '/public/guides');
@@ -47,6 +48,9 @@ const Page = (props: {
 
     return (
         <Layout>
+
+            <PageHead title={`Guides - Page ${pageCurrent}`} description="Guides on how to make a positive impact on the environment." />
+
             <BannerImage
                 title="Guides"
                 imageUrl="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"

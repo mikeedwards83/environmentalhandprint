@@ -1,15 +1,17 @@
 import type { NextPage } from 'next'
 import { BannerVideo } from '../stories/components/BannerVideo/BannerVideo'
 import { PageHeader } from '../stories/components/PageHeader/PageHeader'
-import { Layout } from '../_shared/Layout'
 import image from '../public/images/bannerVideo/VideoThumb.jpg'
+import React from 'react'
+import Layout from '../stories/components/Layout/Layout'
+import PageHead from '../stories/components/PageHead/PageHead'
 
 const Home: NextPage = () => {
 
 
   const banner = {
     videoId: "489517523",
-    videoImage: image as any ,
+    videoImage: image as any,
     subTitle: "Make a positive impact",
     title: "Environmental Handprint",
     button: {
@@ -21,6 +23,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout >
+      <PageHead title="Welcome" description="Having a positive conversation about saving the planet." />
       <BannerVideo {...banner} />
     </Layout >
   )
