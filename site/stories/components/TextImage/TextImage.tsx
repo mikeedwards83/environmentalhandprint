@@ -1,14 +1,12 @@
 import { ReactNode } from 'react';
 
-export enum TextImageSide {
-    ImageLeft,
-    ImageRight
-}
+export type Side = "left" | "right";
+
 export const TextImage = (props:
-    { title?: string, content: string | ReactNode, imageUrl: string, imageText: string, side: TextImageSide }) => {
+    { children: ReactNode, imageUrl: string, imageText: string, side: Side }) => {
 
 
-    const { title, content, imageText, imageUrl, side } = props;
+    const { title, children, imageText, imageUrl, side } = props;
 
 
 
@@ -20,21 +18,14 @@ export const TextImage = (props:
 
     return (
         <div className="row align-items-center  pt-3 TextImage">
-            
-            {side === TextImageSide.ImageLeft && imageComponent}
+
+            {side === "left" && imageComponent}
 
             <div className="col-12 col-lg-6 ">
-                {title &&
-                    <h3 className="text-center-sm">
-                        {title}
-                    </h3>}
-
-                <div>
-                    {content}
-                </div>
+                {children}
             </div>
 
-            {side === TextImageSide.ImageRight && imageComponent}
+            {side === "right" && imageComponent}
 
         </div>
     )

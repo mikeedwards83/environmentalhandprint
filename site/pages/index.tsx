@@ -5,6 +5,7 @@ import image from '../public/images/bannerVideo/VideoThumb.jpg'
 import React from 'react'
 import Layout from '../stories/components/Layout/Layout'
 import PageHead from '../stories/components/PageHead/PageHead'
+import { TextImage } from '../stories/components/TextImage/TextImage'
 
 const Home: NextPage = () => {
 
@@ -25,7 +26,13 @@ const Home: NextPage = () => {
     <Layout >
       <PageHead title="Welcome" description="Having a positive conversation about saving the planet." />
       <BannerVideo {...banner} />
+
+      <div className="container">
+        <TextImage content={undefined} imageUrl={''} imageText={''} side={"left"} />
+      </div>
+
     </Layout >
+
   )
 }
 
