@@ -12,4 +12,16 @@
             display: none;
         }
     }
+
+    .Blog-Stats{
+        svg{
+            color: $brand-dg;
+            font-size: 1.25em;
+            margin-left: 20px;
+
+            &:first-of-type{
+                margin-left: 0px;
+            }
+        }
+    }
 }

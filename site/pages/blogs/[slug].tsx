@@ -15,6 +15,8 @@ const postsPerPage = 5;
 
 
 export const MapBlog = (name: string,data: any): IBlog => {
+
+    console.log( typeof data.date );
     var post: IBlog = {
         author: data.author.name,
         excerpt: data.excerpt,

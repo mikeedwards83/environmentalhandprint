@@ -11,7 +11,6 @@ export const Guide = (props: { guide: IGuide, content: string }) => {
 
   const { guide, content } = props;
 
-  console.log("fd", Guide)
   return (
 
     <div>

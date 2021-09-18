@@ -6,5 +6,5 @@ export interface IBlog {
     excerpt: string
     author: string
     image: IImage,
-    date:Date
+    date:string
   }
