@@ -3,40 +3,38 @@ import { Button } from "../../atoms/Button/Button";
 import { ImageUnsplash } from "../../atoms/ImageUnsplash/ImageUnsplash";
 import { Link } from "../../atoms/Link/Link";
 import { Pagination } from "../../atoms/Pagination/Pagination";
-import { IImage } from "../../../ui/interfaces/IImage";
+import { IBlog } from "./IBlog";
 
-export interface IBlog {
-  title: string,
-  name: string,
-  excerpt: string
-  author: string
-  image: IImage,
-  date:Date
-}
+
 export const BlogList = (props: {
   posts: IBlog[],
   pageCurrent: number,
-  pagesTotal: number
+  pagesTotal: number,
+  rootFolder:string
+  postFolder:string
 }) => {
 
-  const { pageCurrent, pagesTotal, posts } = props;
+  const { pageCurrent, pagesTotal, posts,rootFolder, postFolder } = props;
 
   return (
     <div className={`BlogList`}>
 
-      {posts.map(post => <BlogListItem key={post.name} blog={post} />)}
+      {posts.map(post => <BlogListItem key={post.name} folder={`${rootFolder}/${postFolder}`} blog={post} />)}
 
-      <Pagination pageCurrent={pageCurrent} pagesTotal={pagesTotal} url="/blog" className="pt-3"  />
+      <Pagination pageCurrent={pageCurrent} pagesTotal={pagesTotal} url={`/${rootFolder}`} className="pt-3"  />
     </div>
   )
 }
 
-const BlogListItem = (props: { blog: IBlog }) => {
+const BlogListItem = (props: {folder:string, blog: IBlog }) => {
 
-  const { blog } = props;
+  const { 
+    blog,
+    folder
+  } = props;
 
   return (
-    <Link url={`/blog/articles/${blog.name}`} className="BlogList-Item d-flex flex-row" noDecoration>
+    <Link url={`/${folder}/${blog.name}`} className="BlogList-Item d-flex flex-row" noDecoration>
       <div className="">
         <ImageUnsplash src={blog.image.src} alt={blog.image.alt} width={150} height={150} fpy={blog.image.fpy} fpx={blog.image.fpx} />
       </div>

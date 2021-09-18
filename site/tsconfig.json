@@ -14,10 +14,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "rootDirs": [
-      "stories",
-      "public",      
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx","stories"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

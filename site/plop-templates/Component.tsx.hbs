@@ -1,15 +1,15 @@
 import { ReactNode } from "react"
 
 const {{name}} = (props: { 
-  
+  className?:string
 }) => {
 
     const { 
-
+      className=""
     } = props;
 
     return (
-      <div className={`{{name}}`}>
+      <div className={`{{name}} ${className}`}>
       </div>
     )
 }

@@ -1,0 +1,18 @@
+@import "./../../../styles/Include.scss";
+
+.GuideList{
+    .GuideList-Item{
+        align-items: center;
+        img{
+            max-width: 100%;
+            border-radius: 5px;
+            height:250px;
+            object-fit: cover;
+        }
+        padding: 1rem;
+
+        padding-bottom: 2rem;
+        margin-bottom: 1rem;
+    }
+
+}

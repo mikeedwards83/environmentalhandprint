@@ -1,0 +1,59 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+
+    let pages = new Array();
+
+
+
+    return {
+        paths: pages,
+        fallback: 'blocking',
+    };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+
+    let slug = '';
+
+    if (params && params.slug) {
+        if (Array.isArray(params.slug) && params.slug.length > 0) {
+
+            const pop = params.slug.pop();
+            if (pop) {
+                slug = pop?.toLowerCase();
+            }
+        } else if (params.slug) {
+            slug = (params.slug as any).toLowerCase();
+        }
+
+
+        return {
+            props: {
+            }
+        }
+
+    }
+
+    return {
+        notFound: true,
+    };
+}
+
+const Page = (props: {
+
+}) => {
+
+    const {
+
+    } = props;
+
+    return(
+        <div>
+
+        </div>
+    )
+
+}
+
+export default Page

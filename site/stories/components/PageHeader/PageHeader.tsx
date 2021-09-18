@@ -72,15 +72,15 @@ export const PageHeader = (props: {
                     <ul className="navbar-nav ml-auto">
 
                         <li className="nav-item pr-3">
-                            <a className="nav-link" href="/blog">
+                            <a className="nav-link" href="/blogs">
                                 <i className="fad fa-trees  "> </i>
                                 Blog
                             </a>
                         </li>
                         <li className="nav-item pr-3">
-                            <a className="nav-link" href="https://app.myforest.earth/shop">
-                                <i className="fad fa-store "></i>
-                                Shop &amp; Donate
+                            <a className="nav-link" href="/guides">
+                                <i className="fad fa-trees  "> </i>
+                                Guides
                             </a>
                         </li>
                         <hr />

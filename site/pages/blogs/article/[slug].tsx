@@ -6,7 +6,7 @@ import { Layout } from '../../../_shared/Layout';
 import React from 'react';
 import { Blog } from '../../../stories/components/Blog/Blog';
 import { MapBlog, POSTS_PATH } from '../[slug]';
-import { IBlog } from '../../../stories/components/BlogList/BlogList';
+import { IBlog } from '../../../stories/components/BlogList/IBlog';
 
 
 
@@ -44,11 +44,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         }
     }
     if (slug) {
-        const postFilePath = join(POSTS_PATH, `${slug}/post.mdx`);
+        const postFilePath = join(POSTS_PATH, `${slug}/page.mdx`);
         const fileContents = fs.readFileSync(postFilePath);
         const { data, content } = matter(fileContents);
 
-        const post: IBlog = MapBlog(data, slug);
+        const post: IBlog = MapBlog( slug, data);
 
         
         return {

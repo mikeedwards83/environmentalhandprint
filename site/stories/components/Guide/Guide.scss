@@ -1,0 +1,15 @@
+@import "./../../../styles/Include.scss";
+
+.Guide{
+
+    img{
+        display: block;
+        margin: auto;
+    }
+
+    .Guide-Content{
+        h1{
+            display: none;
+        }
+    }
+}

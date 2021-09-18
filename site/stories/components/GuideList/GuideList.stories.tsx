@@ -1,15 +1,16 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { BlogList } from './BlogList';
-import './BlogList.scss'
+import { GuideList } from './GuideList';
+import './GuideList.scss'
 
 
 export default {
-  title: 'Components/BlogList',
-  component: BlogList,
-} as ComponentMeta<typeof BlogList>;
+  title: 'components/GuideList',
+  component: GuideList,
+  decorators: [(Story) => <div className="container"><Story /></div>]
+} as ComponentMeta<typeof GuideList>;
 
-const Template: ComponentStory<typeof BlogList> = (args) => <BlogList {...args} />;
+const Template: ComponentStory<typeof GuideList> = (args) => <GuideList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -72,8 +73,7 @@ Default.args = {
   ],
   pageCurrent: 2,
   pagesTotal: 5,
-  postFolder:"articles",
-  rootFolder:"blogs"
-
+  postFolder: "guide",
+  rootFolder: "guides"
 };
 

@@ -29,4 +29,40 @@ module.exports = function (plop) {
             templateFile: 'site/plop-templates/Component.scss.hbs'
         }]
     });
+
+    plop.setGenerator('page', {
+        description: 'Add NextJs Page',
+        prompts: [
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Component Name'
+        },
+        {
+            type: 'input',
+            name: 'folder',
+            message: 'Folder Name'
+        }],
+        actions: [{
+            type: 'add',
+            path: 'site/pages/{{folder}}/{{name}}.tsx',
+            templateFile: 'site/plop-templates/Page.tsx.hbs'
+        }
+      ]
+    });
+    plop.setGenerator('slug', {
+        description: 'Add NextJs Slug',
+        prompts: [       
+        {
+            type: 'input',
+            name: 'folder',
+            message: 'Folder Name'
+        }],
+        actions: [{
+            type: 'add',
+            path: 'site/pages/{{folder}}/[slug].tsx',
+            templateFile: 'site/plop-templates/Slug.tsx.hbs'
+        }
+      ]
+    });
 };
