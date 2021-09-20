@@ -28,7 +28,15 @@ const Home: NextPage = () => {
       <BannerVideo {...banner} />
 
       <div className="container">
-        <TextImage content={undefined} imageUrl={''} imageText={''} side={"left"} />
+        <TextImage  imageUrl={'/images/home/PeopleWithHandprint.jpg'} imageText={''} side={"right"} >
+          <h3>What is your handprint?</h3>
+
+        </TextImage>
+
+        <TextImage  imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"left"} >
+          <h3>Why?</h3>
+
+        </TextImage>
       </div>
 
     </Layout >

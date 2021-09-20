@@ -6,7 +6,7 @@ export const TextImage = (props:
     { children: ReactNode, imageUrl: string, imageText: string, side: Side }) => {
 
 
-    const { title, children, imageText, imageUrl, side } = props;
+    const {  children, imageText, imageUrl, side } = props;
 
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, ButtonType } from "../../atoms/Button/Button";
 
-import { faBars, faTimes, faTree } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faHandPaper, faTimes, faTree } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const PageHeader = (props: {
@@ -86,82 +86,11 @@ export const PageHeader = (props: {
                                 Guides
                             </a>
                         </li>
-                        <hr />
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="/subscription">
-                                <i className="fad fa-calendar-star"></i>
-                                Subscriptions
-                            </a>
-                        </li>
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="/business">
-                                <i className="fad fa-briefcase"></i>
-                                For Business
-                            </a>
-                        </li>
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="/offset">
-                                <i className="fas fa-plane"></i>
-                                Single Offsets
-                            </a>
-                        </li>
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="/donate">
-                                <i className="fad fa-hands-heart"></i>
-                                Support Charities
-                            </a>
-                        </li>
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="/gift">
-                                <i className="fad fa-gifts"></i>
-                                Green Gifts
-                            </a>
-                        </li>
-                        <hr />
-
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="/handprint">
-                                <i className="fad fa-hand-heart"></i>
-                                Your Handprint
-                            </a>
-                        </li>
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="/blog">
-                                <i className="fad fa-megaphone"></i>
-                                Blog
-                            </a>
-                        </li>
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="/yourforest">
-                                <i className="fad fa-trees "> </i>
-                                What is My Forest?
-                            </a>
-                        </li>
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="/about">
-                                <i className="fad fa-portrait"></i>
-                                About
-                            </a>
-                        </li>
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="https://app.myforest.earth/pages/reports">
-                                <i className="fas fa-file-chart-line"></i>
-                                Our Reports
-                            </a>
-                        </li>
                     </ul>
                     <hr />
                     <div className="text-center">
-
-                        <a className="tt-btn-primary-light btn " href="https://app.myforest.earth/install">
-                            &nbsp;
-                            <i className="fas fa-mobile-android-alt "></i> Download The App&nbsp;
-                        </a>
-                    </div>
-                    <hr />
-                    <div className="text-center">
                         <a className="" href="/">
-                            <img src="~/Images/Logo.svg" style={{ maxHeight: "50px" }} alt="MyForest" />
+                           <img src="~/Images/Logo.svg" style={{ maxHeight: "50px" }} alt="Environmental Handprint" />
                         </a>
                     </div>
                 </div>
