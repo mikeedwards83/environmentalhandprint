@@ -1,7 +1,7 @@
 import { BannerVideo } from "../../components/BannerVideo/BannerVideo"
 import { PageHeader } from "../../components/PageHeader/PageHeader"
 import { QuickLinks } from "../../components/QuickLinks/QuickLinks"
-import { TextImage, TextImageSide } from "../../components/TextImage/TextImage"
+import { Side, TextImage } from "../../components/TextImage/TextImage"
 import book from './../../components/QuickLinks/assets/Book1.svg'
 import textImage from './../../components/TextImage/Assets/Image.jpg'
 import videoImage from './../../components/BannerVideo/Assets/VideoThumb.jpg'
@@ -52,9 +52,9 @@ export const HomePage = (props: {}) => {
     const block1 = {
         imageText: "Desk Trees",
         imageUrl: textImage as any,
-        side: TextImageSide.ImageLeft,
+        side: "left" as Side,
         title: "Step 1 - Planet Positive Workforce",
-        content: <>
+        children: <>
             <p>
                 Make a planet positive contribution on behalf of your employees by planting trees and offsetting their climate impact.
             </p>
@@ -66,9 +66,9 @@ export const HomePage = (props: {}) => {
     const block2 = {
         imageText: "Desk Trees",
         imageUrl: textImage as any,
-        side: TextImageSide.ImageRight,
+        side: "right" as Side,
         title: "Step 1 - Planet Positive Workforce",
-        content: <>
+        children: <>
             <p>
                 Make a planet positive contribution on behalf of your employees by planting trees and offsetting their climate impact.
             </p>

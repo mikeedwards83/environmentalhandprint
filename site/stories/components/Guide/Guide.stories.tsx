@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof Guide> = (args) => <Guide {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  Guide: {
+  guide: {
     title: "title1",
     author: "author",
     excerpt: "A afaef afea aefaef aefaef aefaf afaefae faefaef",

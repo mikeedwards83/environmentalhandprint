@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { PageHead } from './PageHead';
+import  PageHead  from './PageHead';
 import './PageHead.scss'
 
 

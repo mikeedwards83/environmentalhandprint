@@ -22,7 +22,7 @@ Default.args = {
       src: "https://images.unsplash.com/photo-1615420510251-083da7739330",
       alt: "test"
     },
-    date: new Date()
+    date: new Date().toJSON()
   },
   content:"hello world"
 }

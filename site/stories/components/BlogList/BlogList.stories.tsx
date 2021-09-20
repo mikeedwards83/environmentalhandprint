@@ -23,7 +23,7 @@ Default.args = {
       src: "https://images.unsplash.com/photo-1615420510251-083da7739330",
       alt: "test"
     },
-    date: new Date()
+    date: new Date().toJSON()
   },
   {
     title: "title1",
@@ -34,7 +34,7 @@ Default.args = {
       src: "https://images.unsplash.com/photo-1615420510251-083da7739330",
       alt: "test"
     },
-    date: new Date()
+    date: new Date().toJSON()
   },
   {
     title: "title1",
@@ -45,7 +45,7 @@ Default.args = {
       src: "https://images.unsplash.com/photo-1615420510251-083da7739330",
       alt: "test"
     },
-    date: new Date()
+    date: new Date().toJSON()
   },
   {
     title: "title1",
@@ -56,7 +56,7 @@ Default.args = {
       src: "https://images.unsplash.com/photo-1615420510251-083da7739330",
       alt: "test"
     },
-    date: new Date()
+    date: new Date().toJSON()
   },
   {
     title: "title1",
@@ -67,7 +67,7 @@ Default.args = {
       src: "https://media.istockphoto.com/vectors/hand-print-vector-id165761878?k=20&m=165761878&s=612x612&w=0&h=vWMybbPjcI32m3w2Qaiyx1NnMk1COtL1FpaX5_3SJxM=",
       alt: "test"
     },
-    date: new Date()
+    date: new Date().toJSON()
   },
   ],
   pageCurrent: 2,

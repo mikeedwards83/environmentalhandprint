@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react"
-import { Layout } from "../../../_shared/Layout";
 import { Redirect } from "../Redirect/Redirect";
 
 const ListingIndex = (props: {
