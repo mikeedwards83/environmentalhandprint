@@ -6,27 +6,18 @@ export const TextImage = (props:
     { children: ReactNode, imageUrl: string, imageText: string, side: Side }) => {
 
 
-    const {  children, imageText, imageUrl, side } = props;
+    const { children, imageText, imageUrl, side } = props;
 
-
-
-    const imageComponent =
-        <div className="col-12 col-lg-6 text-center">
-            <img src={imageUrl} data-aos="fade-left" className="aos-init aos-animate" alt={imageText} />
-        </div>
 
 
     return (
         <div className="row align-items-center  pt-3 TextImage">
-
-            {side === "left" && imageComponent}
-
+            <div className={`col-12 col-lg-6 text-center pb-4 pb-lg-0 order-first ${side ==="right" ? "order-lg-last":""}`}>
+                <img src={imageUrl} data-aos="fade-left" className="aos-init aos-animate" alt={imageText} />
+            </div>
             <div className="col-12 col-lg-6 ">
                 {children}
             </div>
-
-            {side === "right" && imageComponent}
-
         </div>
     )
 

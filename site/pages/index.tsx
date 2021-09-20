@@ -7,6 +7,9 @@ import Layout from '../stories/components/Layout/Layout'
 import PageHead from '../stories/components/PageHead/PageHead'
 import { TextImage } from '../stories/components/TextImage/TextImage'
 import Arrow from '../stories/components/Arrow/Arrow'
+import Section from '../stories/atoms/Section/Section'
+import { IQuickLink, QuickLinks } from '../stories/components/QuickLinks/QuickLinks'
+import { faCrow, faFrog, faKiwiBird, faOtter } from '@fortawesome/free-solid-svg-icons'
 
 const Home: NextPage = () => {
 
@@ -22,12 +25,54 @@ const Home: NextPage = () => {
     }
   }
 
+  const quickLinks: IQuickLink[] = [
+    {
+      title: "Your individual handprint",
+      text: "Find out how you can add to your unique handprint.",
+      link: {
+        url: "/pages/individual",
+        text: "Learn More"
+      },
+      icon: faOtter
+    },
+    {
+      title: "Your business handprint",
+      text: "Grow the handprint of your company and customers.",
+      link: {
+        url: "/pages/business",
+        text: "Learn More"
+      },
+      icon: faKiwiBird
+    },
+    {
+      title: "Your community handprint",
+      text: "Bring your community together to make a difference.",
+      link: {
+        url: "/pages/business",
+        text: "Learn More"
+      },
+      icon: faCrow
+    },
+    {
+      title: "Your NGO handprint",
+      text: "How can your organisation help grow handprints.",
+      link: {
+        url: "/pages/business",
+        text: "Learn More"
+      },
+      icon: faFrog
+    }
+
+  ]
+
+
+
 
   return (
     <Layout >
       <PageHead title="Welcome" description="Having a positive conversation about saving the planet." />
       <BannerVideo {...banner} />
-
+      <QuickLinks links={quickLinks} />
       <div className="container">
         <Arrow>
           <TextImage imageUrl={'/images/home/PeopleWithHandprint.jpg'} imageText={''} side={"right"} >
@@ -42,20 +87,34 @@ const Home: NextPage = () => {
 
           </TextImage>
         </Arrow>
-
-        <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"left"} >
-          <h3>Why?</h3>
-          <p className="lead">
-            We want people to be proud and celebrate the contribution they are making to planet and have a positive conversation about
-            the change we can make.
-          </p>
-          <p className="lead">
-            We have many negative metaphors around the environment, carbon footprint, global warming, land grabbing. So lets start a positive metaphor, one that
-            recognises our efforts and points us in the direction we want to go.
-          </p>
-        </TextImage>
+        <Arrow arrow={2}>
+          <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"left"} >
+            <h3>Why?</h3>
+            <p className="lead">
+              We want you to be proud and celebrate the contribution you are making to planet and to have <strong>positive conversations</strong> about
+              the changes we can all make.
+            </p>
+            <p className="lead">
+              We have many negative metaphors around the environment, carbon footprint, global warming, land grabbing; So lets start a <strong>positive metaphor</strong>, one that
+              recognises our efforts and points us in the direction we want to go.
+            </p>
+          </TextImage>
+        </Arrow>
       </div>
+      <Section color="dark">
+        <div className="container">
+          <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"left"} >
+            <h3>What can you do?</h3>
+            <p className="lead">
 
+            </p>
+            <p className="lead">
+              We have many negative metaphors around the environment, carbon footprint, global warming, land grabbing. So lets start a positive metaphor, one that
+              recognises our efforts and points us in the direction we want to go.
+            </p>
+          </TextImage>
+        </div>
+      </Section>
     </Layout >
 
   )

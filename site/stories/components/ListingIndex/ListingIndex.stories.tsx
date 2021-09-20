@@ -13,5 +13,7 @@ const Template: ComponentStory<typeof ListingIndex> = (args) => <ListingIndex {.
 
 export const Default = Template.bind({});
 Default.args = {  
+  redirect:false,
+  folder:"test"
 };
 

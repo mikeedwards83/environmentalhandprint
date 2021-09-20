@@ -17,7 +17,6 @@ const PageHead = (props: {
       <Head>
         <title>{title} - Environmental Handprint</title>
         <meta name="description" content={description} />
-        <link rel="shortcut icon" type="image/png" href="/images/logo-icon.png"/>
         {children}
       </Head>
     )
