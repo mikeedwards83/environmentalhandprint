@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-
-export const Image = (props: { src: StaticImageData|string, className?: string, alt?:string }) => {
+import { default as NextImage } from "next/image"
+export const Image = (props: { src: StaticImageData | string, className?: string, alt?: string }) => {
 
     const { src, className = "", alt } = props;
 
@@ -23,7 +23,8 @@ export const Image = (props: { src: StaticImageData|string, className?: string, 
 
 
     return (
-
-        <img src={url} className={className} alt={alt} />
+        <>
+                <img src={url} className={className} alt={alt} />}
+        </>
     )
 }

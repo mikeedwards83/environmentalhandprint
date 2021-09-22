@@ -6,7 +6,7 @@ module.exports = function (plop) {
             type: 'list',
             name: 'type',
             message: 'Component Type',
-            choices: ["atom", "component","page"]
+            choices: ["atom", "component","page","material"]
         },
         {
             type: 'input',

@@ -104,13 +104,32 @@ const Home: NextPage = () => {
       <Section color="dark">
         <div className="container">
           <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"left"} >
-            <h3>What can you do?</h3>
+            <h3>Growing Your Handprint</h3>
             <p className="lead">
-
+              Growing your handprint is easy, and can be done with everyday small actions and large challenging actions actions.
             </p>
+          </TextImage>
+          <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"right"} >
+            <h3>Everyday Actions</h3>
             <p className="lead">
-              We have many negative metaphors around the environment, carbon footprint, global warming, land grabbing. So lets start a positive metaphor, one that
-              recognises our efforts and points us in the direction we want to go.
+              Start adding to your handprint by making small conscience decisions that help the planet. For example reusing
+              old jars, buying food not wrapped in plastic and walking to work. These little actions each day will increase
+              the size of handprint each day.
+            </p>
+          </TextImage>
+          <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"left"} >
+            <h3>Large Actions</h3>
+            <p className="lead">
+              Looking to grow your handprint in a big way? Make the biggest positive impact  your can,
+              raise money for an environmental charity, volunteer to plant trees for the day and switching to
+              an electric car. There are many ways that your can make a huge difference.
+            </p>
+          </TextImage>
+          <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"right"} >
+            <h3>Community Actions</h3>
+            <p className="lead">
+              Bring your friends, family and local community together to grow your communites environmental handprint and have fun. 
+              Organise a local litter pick, take part in car sharing,
             </p>
           </TextImage>
         </div>

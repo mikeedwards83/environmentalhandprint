@@ -5,7 +5,7 @@ import './Typography.scss'
 
 
 export default {
-  title: 'atoms/Typography',
+  title: 'materials/Typography',
   component: Typography,
   decorators: [(Story)=><div className="container"><Story /></div>]
 } as ComponentMeta<typeof Typography>;
