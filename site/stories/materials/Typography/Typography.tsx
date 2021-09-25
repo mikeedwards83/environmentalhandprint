@@ -54,6 +54,9 @@ export const Typography = (props: {}) => {
         <li>Item 3</li>
         <li>Item 4</li>
       </ul>
+      <blockquote>
+        T
+      </blockquote>
     </div>
   )
 }

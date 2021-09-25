@@ -10,6 +10,9 @@ import Arrow from '../stories/components/Arrow/Arrow'
 import Section from '../stories/atoms/Section/Section'
 import { IQuickLink, QuickLinks } from '../stories/components/QuickLinks/QuickLinks'
 import { faCrow, faFrog, faKiwiBird, faOtter } from '@fortawesome/free-solid-svg-icons'
+import CalloutHorizontal from '../stories/components/CalloutsHorizontal/CalloutsHorizontal'
+import CalloutsHorizontal from '../stories/components/CalloutsHorizontal/CalloutsHorizontal'
+import { ICallout } from '../stories/components/Callout/Callout'
 
 const Home: NextPage = () => {
 
@@ -66,7 +69,37 @@ const Home: NextPage = () => {
   ]
 
 
+  const callouts: ICallout[] = [
+    {
+      title: "Growing Your Handprint",
+      alt: "",
+      src: "/images/home/home-projects.jpg",
+      children: <p className="lead">
+        Growing your handprint is easy, and can be done with everyday small actions and large challenging actions actions.
+      </p>
+    },
+    {
+      title: "Everyday Actions",
+      alt: "",
+      src: "/images/home/home-projects.jpg",
+      children: <p className="lead">
+        Start adding to your handprint by making small conscience decisions that help the planet. For example reusing
+        old jars, buying food not wrapped in plastic and walking to work. These little actions each day will increase
+        the size of handprint each day.
+      </p>
+    },
+    {
+      title: "Large Actions",
+      alt: "",
+      src: "/images/home/home-projects.jpg",
+      children: <p className="lead">
+        Looking to grow your handprint in a big way? Make the biggest positive impact  your can,
+        raise money for an environmental charity, volunteer to plant trees for the day and switching to
+        an electric car. There are many ways that your can make a huge difference.
+      </p>
+    }
 
+  ]
 
   return (
     <Layout >
@@ -84,7 +117,6 @@ const Home: NextPage = () => {
             <p className="lead">
               From everyday small actions like turning lights off and picking up litter to huge actions like getting out and planting trees or by an electric car.
             </p>
-
           </TextImage>
         </Arrow>
         <Arrow arrow={2}>
@@ -102,38 +134,24 @@ const Home: NextPage = () => {
         </Arrow>
       </div>
       <Section color="dark">
+
+
         <div className="container">
-          <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"left"} >
-            <h3>Growing Your Handprint</h3>
-            <p className="lead">
-              Growing your handprint is easy, and can be done with everyday small actions and large challenging actions actions.
-            </p>
-          </TextImage>
-          <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"right"} >
-            <h3>Everyday Actions</h3>
-            <p className="lead">
-              Start adding to your handprint by making small conscience decisions that help the planet. For example reusing
-              old jars, buying food not wrapped in plastic and walking to work. These little actions each day will increase
-              the size of handprint each day.
-            </p>
-          </TextImage>
-          <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"left"} >
-            <h3>Large Actions</h3>
-            <p className="lead">
-              Looking to grow your handprint in a big way? Make the biggest positive impact  your can,
-              raise money for an environmental charity, volunteer to plant trees for the day and switching to
-              an electric car. There are many ways that your can make a huge difference.
-            </p>
-          </TextImage>
-          <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"right"} >
-            <h3>Community Actions</h3>
-            <p className="lead">
-              Bring your friends, family and local community together to grow your communites environmental handprint and have fun. 
-              Organise a local litter pick, take part in car sharing,
-            </p>
-          </TextImage>
+
+          <CalloutsHorizontal callouts={callouts} title={""} />
+
+
         </div>
       </Section>
+      <div className="container">
+        <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"right"} >
+          <h3>Community Actions</h3>
+          <p className="lead">
+            Bring your friends, family and local community together to grow your communites environmental handprint and have fun.
+            Organise a local litter pick, take part in car sharing,
+          </p>
+        </TextImage>
+      </div>
     </Layout >
 
   )

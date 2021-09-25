@@ -1,6 +1,6 @@
 @import "./../../../styles/Include.scss";
 
-.Image{
-
-
+.Image {
+    object-fit: contain;
+    max-width: 100%;
 }

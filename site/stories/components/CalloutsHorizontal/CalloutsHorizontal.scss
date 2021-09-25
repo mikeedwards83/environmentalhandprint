@@ -1,0 +1,35 @@
+@import "./../../../styles/Include.scss";
+
+.CalloutHorizontal {
+    .Callout {
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 20%;
+            height: 60%;
+
+            @include media-breakpoint-up("lg") {
+                border-left: 1px solid $brand-lg;
+            }
+        }
+        &:first-of-type {
+            &::after {
+                border-left: none;
+            }
+        }
+    }
+
+    h2 {
+        font-weight: bold;
+    }
+}
+.dark {
+    .CalloutHorizontal {
+        .Callout {
+            &::after {
+                border-color: $white;
+            }
+        }
+    }
+}
