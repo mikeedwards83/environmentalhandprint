@@ -3,6 +3,8 @@ import { Link } from '../../atoms/Link/Link';
 import { ILink } from '../../../ui/interfaces/ILink'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import React from 'react';
+import Hr from '../../atoms/Hr/Hr';
 
 export const PageFooter = (props: {
     links1: ILink[]
@@ -12,12 +14,13 @@ export const PageFooter = (props: {
     twitter?: ILink,
     facebook?: ILink,
     youtube?: ILink
+    className?:string
 }) => {
 
-    const { links1, links2, copyRight, instagram, twitter, facebook, youtube } = props;
+    const { links1, links2, copyRight, instagram, twitter, facebook, youtube, className="" } = props;
     return (
-        <>
-            <hr style={{ borderWidth: "2px", marginTop: "60px" }}></hr>
+        <div className={`${className}`}>
+            <Hr  />
             <div className="container">
                 <footer className="footer">
                     <div className="row ">
@@ -85,6 +88,6 @@ export const PageFooter = (props: {
 
                 </footer>
             </div>
-        </>
+        </div>
     )
 }

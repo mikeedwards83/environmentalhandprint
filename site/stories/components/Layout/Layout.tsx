@@ -22,7 +22,7 @@ export const Layout = (props: { children?: ReactNode }) => {
       },
     ],
     links2: [
-     
+
     ],
     copyRight: "© 2021 - Environmental Handprint, All Rights Reserved",
     instagram: {
@@ -46,14 +46,18 @@ export const Layout = (props: { children?: ReactNode }) => {
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Poppins&display=swap" rel="stylesheet" />
         <style>{dom.css()}</style>
       </Head>
-      <PageHeader
-        title="Environmental Handprint"
-        logo="/images/logo-horizontal.svg"
-      />
-      {children}
+      <div className="Layout">
+        <div className="Layout-Page">
+          <PageHeader
+            title="Environmental Handprint"
+            logo="/images/logo-horizontal.svg"
+          />
+          {children}
 
-      <PageFooter  {...footer} />
+          <PageFooter className="Layout-Footer"  {...footer} />
+        </div>
 
+      </div>
 
       <Script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossOrigin="anonymous"></Script>
       <Script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossOrigin="anonymous"></Script>
