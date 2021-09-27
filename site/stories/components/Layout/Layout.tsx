@@ -13,39 +13,16 @@ export const Layout = (props: { children?: ReactNode }) => {
   const footer = {
     links1: [
       {
-        text: "Link 1",
-        url: "http://test,com"
+        text: "Colours",
+        url: "/pages/colours"
       },
       {
-        text: "Link 1",
-        url: "http://test,com"
+        text: "Blogs",
+        url: "/blogs"
       },
-      {
-        text: "Link 1",
-        url: "http://test,com"
-      }
-      , {
-        text: "Link 1",
-        url: "http://test,com"
-      }
     ],
     links2: [
-      {
-        text: "Link 1",
-        url: "http://test,com"
-      },
-      {
-        text: "Link 1",
-        url: "http://test,com"
-      },
-      {
-        text: "Link 1",
-        url: "http://test,com"
-      }
-      , {
-        text: "Link 1",
-        url: "http://test,com"
-      }
+     
     ],
     copyRight: "© 2021 - Environmental Handprint, All Rights Reserved",
     instagram: {

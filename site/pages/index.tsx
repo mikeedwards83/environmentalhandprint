@@ -13,6 +13,8 @@ import { faCrow, faFrog, faKiwiBird, faOtter } from '@fortawesome/free-solid-svg
 import CalloutHorizontal from '../stories/components/CalloutsHorizontal/CalloutsHorizontal'
 import CalloutsHorizontal from '../stories/components/CalloutsHorizontal/CalloutsHorizontal'
 import { ICallout } from '../stories/components/Callout/Callout'
+import { Button } from '../stories/atoms/Button/Button'
+import { ButtonLink } from '../stories/atoms/ButtonLink/ButtonLink'
 
 const Home: NextPage = () => {
 
@@ -73,7 +75,7 @@ const Home: NextPage = () => {
     {
       title: "Growing Your Handprint",
       alt: "",
-      src: "/images/home/home-projects.jpg",
+      src: "/images/home/grow.png",
       children: <p className="lead">
         Growing your handprint is easy, and can be done with everyday small actions and large challenging actions actions.
       </p>
@@ -81,21 +83,18 @@ const Home: NextPage = () => {
     {
       title: "Everyday Actions",
       alt: "",
-      src: "/images/home/home-projects.jpg",
+      src: "/images/home/everyday.jpg",
       children: <p className="lead">
-        Start adding to your handprint by making small conscience decisions that help the planet. For example reusing
-        old jars, buying food not wrapped in plastic and walking to work. These little actions each day will increase
-        the size of handprint each day.
+        Make small decisions everyday that help the planet, every small action you take grows your handprint.
       </p>
     },
     {
-      title: "Large Actions",
+      title: "Grow Together",
       alt: "",
-      src: "/images/home/home-projects.jpg",
+      src: "/images/home/community.jpg",
       children: <p className="lead">
-        Looking to grow your handprint in a big way? Make the biggest positive impact  your can,
-        raise money for an environmental charity, volunteer to plant trees for the day and switching to
-        an electric car. There are many ways that your can make a huge difference.
+       Bring your friends, family and local community together to grow your handprints
+       and have fun. Organise a local litter pick, take part in car sharing.
       </p>
     }
 
@@ -144,12 +143,13 @@ const Home: NextPage = () => {
         </div>
       </Section>
       <div className="container">
-        <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"right"} >
-          <h3>Community Actions</h3>
+
+        <TextImage imageUrl={'/images/home/hands.jpg'} imageText={''} side={"right"} >
+          <h3>What Colour Is Your Handprint?</h3>
           <p className="lead">
-            Bring your friends, family and local community together to grow your communites environmental handprint and have fun.
-            Organise a local litter pick, take part in car sharing,
+            Your handprint comes in a range of different colours. Find out which colour your action is and how it makes a difference.            
           </p>
+          <ButtonLink url="/pages/colours"  >Discover More </ButtonLink>
         </TextImage>
       </div>
     </Layout >
