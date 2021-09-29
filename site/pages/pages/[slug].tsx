@@ -4,7 +4,7 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import React from 'react';
 import { PageGetStaticPaths, PageGetStaticProps } from '../../_shared/Slug-Page';
-import { IPage } from './IPage';
+import { IPage } from '../../ui/interfaces/IPage';
 import Layout from '../../stories/components/Layout/Layout';
 import PageHead from '../../stories/components/PageHead/PageHead';
 import Markdown from '../../stories/components/Markdown/Markdown';

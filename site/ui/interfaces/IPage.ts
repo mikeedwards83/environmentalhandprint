@@ -1,4 +1,4 @@
-import { IImage } from "../../ui/interfaces/IImage";
+import { IImage } from "./IImage";
 
 export interface IPage {
     title: string,
