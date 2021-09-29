@@ -1,8 +1,9 @@
 @import "./../../../styles/Include.scss";
 
 .PageHeader {
+    border-bottom: $brand-lg solid 1px;
+    max-height: 75px;
     .navbar {
-        border-bottom: $brand-lg solid 1px;
     }
     .side-nav {
         position: fixed;

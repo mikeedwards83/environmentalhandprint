@@ -4,37 +4,48 @@ import React, { ReactNode } from "react"
 import { PageFooter } from "../PageFooter/PageFooter";
 import { PageHeader } from "../PageHeader/PageHeader";
 import { config, dom } from "@fortawesome/fontawesome-svg-core";
+import ShareThis from "../ShareThis/ShareThis";
+import CookieBanner from "../CookieBanner/CookieBanner";
+import GoogleAnalytics from "../GoogleAnalytics/GoogleAnalytics";
+import { ILink } from "../../../ui/interfaces/ILink";
+import { faTree } from "@fortawesome/free-solid-svg-icons";
 config.autoAddCss = false;
 
 export const Layout = (props: { children?: ReactNode }) => {
 
   const { children } = props;
 
+  const linkBlog: ILink =
+  {
+    text: "Blogs",
+    url: "/blogs/1",
+    icon: faTree
+  };
+  const linkPrivacyPolicy: ILink =
+  {
+    text: "Privacy Policy",
+    url: "/pages/privacypolicy",
+    icon: faTree
+  };
+
+
   const footer = {
     links1: [
-      {
-        text: "Colours",
-        url: "/pages/colours"
-      },
-      {
-        text: "Blogs",
-        url: "/blogs"
-      },
+      linkBlog
     ],
     links2: [
-
+      linkPrivacyPolicy
     ],
     copyRight: "© 2021 - Environmental Handprint, All Rights Reserved",
-    instagram: {
-      url: "http://"
-    },
-    facebook: {
-      url: "http://"
-    },
+  
     twitter: {
-      url: "http://"
+      url: "https://twitter.com/handprintearth"
     }
   };
+
+  const headerLinks = [
+    linkBlog
+  ]
 
 
 
@@ -51,8 +62,11 @@ export const Layout = (props: { children?: ReactNode }) => {
           <PageHeader
             title="Environmental Handprint"
             logo="/images/logo-horizontal.svg"
+            links={headerLinks}
           />
-          {children}
+          <div className="Layout-Content">
+            {children}
+          </div>
 
           <PageFooter className="Layout-Footer"  {...footer} />
         </div>
@@ -64,6 +78,11 @@ export const Layout = (props: { children?: ReactNode }) => {
       <Script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossOrigin="anonymous"></Script>
 
       <Script src="/scripts/aos.js"></Script>
+      <ShareThis />
+
+      <CookieBanner>
+        <GoogleAnalytics />
+      </CookieBanner>
     </>
   )
 }

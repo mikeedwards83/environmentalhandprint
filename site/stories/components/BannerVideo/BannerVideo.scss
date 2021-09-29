@@ -41,15 +41,27 @@
         h1{
             color: $white;
             font-weight: bold;
+            font-size: 2.5rem;
+            max-width: 80%;
+            
+
+            @include media-breakpoint-up(md) {
+                font-size: 4rem;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 5rem;
+            }
         }
         h2{
             color:$white;
+            max-width: 80%;
+
         }
 
         .bannerVideo-text-container{
             border-left:10px solid $brand-lg;
             padding: 10px;
-
+            margin:auto;
         }
     }
 }

@@ -11,7 +11,7 @@ import { IBlog } from '../../stories/components/BlogList/IBlog';
 import Layout from '../../stories/components/Layout/Layout';
 import PageHead from '../../stories/components/PageHead/PageHead';
 
-export const POSTS_PATH = join(process.cwd(), '/public/articles');
+export const POSTS_PATH = join(process.cwd(), '/public/blogs');
 const postsPerPage = 5;
 
 

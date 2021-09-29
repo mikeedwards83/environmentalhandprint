@@ -1,14 +1,16 @@
 @import "./../../../styles/Include.scss";
 
-.Layout{
-    .Layout-Page{
+.Layout {
+    .Layout-Page {
         display: grid;
         min-height: 100vh;
+        grid-template-rows: auto 1fr auto;
 
-        .Layout-Footer{
+        .Layout-Footer {
             display: grid;
             align-self: end;
         }
+        .Layout-Content {
+        }
     }
-
 }

@@ -1,0 +1,30 @@
+@import "./../../../styles/Include.scss";
+
+.CookieBanner {
+    .CookieBanner-Modal {
+        background-color: rgba(107, 107, 107, 0.3);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 1000;
+    }
+    .CookieBanner-Notice {
+        position: fixed;
+        top: 20%;
+        z-index: 10000;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .CookieBanner-Notice-Container {
+            background-color: $white;
+            border: solid 1px $brand-lg;
+            padding: 1rem;
+            border-radius: 10px;
+            margin:auto;
+            display: inline-block;
+        }
+    }
+}

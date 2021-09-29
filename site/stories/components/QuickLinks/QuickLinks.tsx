@@ -9,7 +9,7 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 export interface IQuickLink {
     title: string,
     text: string,
-    link: ILink,
+    link?: ILink,
     imageUrl?: string
     icon?: IconProp
 }
@@ -51,15 +51,16 @@ const QuickLink = (props: { link: IQuickLink }) => {
                     <img src={link.imageUrl} data-aos="fade-right" data-aos-delay="000" data-aos-offset="0" />
                 }
                 {link.icon &&
-                    <FontAwesomeIcon icon={link.icon } />
+                    <FontAwesomeIcon icon={link.icon} />
                 }
                 <h4>{link.title}</h4>
                 <p>
                     {link.text}
                 </p>
-                <div>
+                {link.link && <div>
                     <ButtonLink size={"Small"} type={"PrimaryWhite"} url={link.link.url}>{link.link.text}</ButtonLink>
                 </div>
+                }
             </div>
         </div>
     )

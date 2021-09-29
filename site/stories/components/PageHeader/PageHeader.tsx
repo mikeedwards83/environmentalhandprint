@@ -3,13 +3,17 @@ import { Button, ButtonType } from "../../atoms/Button/Button";
 
 import { faBars, faHandPaper, faTimes, faTree } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ILink } from "../../../ui/interfaces/ILink";
+import { Image } from "../../atoms/Image/Image";
+import { ScreenSize } from "../../../hooks/useBootstrapSize";
 
 export const PageHeader = (props: {
     logo: string,
     title: string,
+    links: ILink[]
 }) => {
 
-    const { logo, title } = props;
+    const { logo, title, links } = props;
 
     const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -21,9 +25,11 @@ export const PageHeader = (props: {
         setIsNavOpen(false);
     }
 
+
+
     return (
         <div className="PageHeader">
-            <nav className="navbar navbar-expand-lg  tt-fg-primary-dark">
+            <nav className="navbar navbar-expand-lg">
                 <a className="navbar-brand" href="/">
                     <img src={logo} style={{ maxHeight: "50px" }} className="pr-2" alt={title} />
                 </a>
@@ -74,23 +80,26 @@ export const PageHeader = (props: {
 
                     <ul className="navbar-nav ml-auto">
 
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="/blogs/1">
-                                <FontAwesomeIcon icon={faTree} />
-                                Blog
-                            </a>
-                        </li>
-                        <li className="nav-item pr-3">
-                            <a className="nav-link" href="/guides/1">
-                                <FontAwesomeIcon icon={faTree} />
-                                Guides
-                            </a>
-                        </li>
+
+                        {links.map(link =>
+                            <li className="nav-item pr-3" key={link.url}>
+
+                                <a className="nav-link" href={link.url} >
+                                    {link.icon && <FontAwesomeIcon icon={link.icon} />}
+                                    {link.text}
+                                </a>
+                            </li>
+                        )}
+
                     </ul>
                     <hr />
                     <div className="text-center">
                         <a className="" href="/">
-                           <img src="~/Images/Logo.svg" style={{ maxHeight: "50px" }} alt="Environmental Handprint" />
+                            <Image src="/images/logo-horizontal.svg" imageScales={
+                                [
+                                    {size:ScreenSize.SM, height:48, width:202}
+                                ]
+                            } alt="Environmental Handprint" />
                         </a>
                     </div>
                 </div>

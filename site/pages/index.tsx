@@ -24,47 +24,31 @@ const Home: NextPage = () => {
     videoImage: image as any,
     subTitle: "Make a positive impact",
     title: "Environmental Handprint",
-    button: {
-      text: "Findout More",
-      url: "http://test.com"
-    }
+   
   }
 
   const quickLinks: IQuickLink[] = [
     {
       title: "Your individual handprint",
-      text: "Find out how you can add to your unique handprint.",
-      link: {
-        url: "/pages/individual",
-        text: "Learn More"
-      },
+      text: "Find out how you can add to your unique handprint.",     
       icon: faOtter
     },
     {
       title: "Your business handprint",
       text: "Grow the handprint of your company and customers.",
-      link: {
-        url: "/pages/business",
-        text: "Learn More"
-      },
+     
       icon: faKiwiBird
     },
     {
       title: "Your community handprint",
       text: "Bring your community together to make a difference.",
-      link: {
-        url: "/pages/business",
-        text: "Learn More"
-      },
+    
       icon: faCrow
     },
     {
       title: "Your NGO handprint",
       text: "How can your organisation help grow handprints.",
-      link: {
-        url: "/pages/business",
-        text: "Learn More"
-      },
+   
       icon: faFrog
     }
 
@@ -118,7 +102,6 @@ const Home: NextPage = () => {
             </p>
           </TextImage>
         </Arrow>
-        <Arrow arrow={2}>
           <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"left"} >
             <h3>Why?</h3>
             <p className="lead">
@@ -130,7 +113,6 @@ const Home: NextPage = () => {
               recognises our efforts and points us in the direction we want to go.
             </p>
           </TextImage>
-        </Arrow>
       </div>
       <Section color="dark">
 
@@ -149,7 +131,7 @@ const Home: NextPage = () => {
           <p className="lead">
             Your handprint comes in a range of different colours. Find out which colour your action is and how it makes a difference.            
           </p>
-          <ButtonLink url="/pages/colours"  >Discover More </ButtonLink>
+           <p><strong>Discover More - Coming Soon</strong></p>
         </TextImage>
       </div>
     </Layout >

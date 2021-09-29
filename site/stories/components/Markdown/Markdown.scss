@@ -1,0 +1,13 @@
+@import "./../../../styles/Include.scss";
+
+.Markdown {
+    h1 {
+        display: none;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
+}

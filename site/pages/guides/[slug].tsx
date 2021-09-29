@@ -9,7 +9,7 @@ import Layout from '../../stories/components/Layout/Layout';
 import PageHead from '../../stories/components/PageHead/PageHead';
 
 
-export const POSTS_PATH = join(process.cwd(), '/public/guides');
+export const POSTS_PATH = join(process.cwd(), '/public/pages');
 const postsPerPage = 5;
 
 
