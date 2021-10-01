@@ -1,4 +1,4 @@
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarWeek, faChevronRight, faPaw } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { ReactNode } from "react"
 import { Button } from "../../atoms/Button/Button";
@@ -45,6 +45,9 @@ const BlogListItem = (props: { folder: string, blog: IBlog }) => {
         <p>
           {blog.excerpt}
         </p>
+        <div className="pb-3">
+        <FontAwesomeIcon icon={faCalendarWeek} /> {new Date(blog.date).toLocaleDateString()} <FontAwesomeIcon icon={faPaw} /> {blog.author}
+        </div>
         <Button>
           Read <FontAwesomeIcon icon={faChevronRight} />
 

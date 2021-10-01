@@ -51,7 +51,6 @@ const List = (props: { pageCurrent: number, pagesTotal: number, pages?: IBlog[] 
 
     const { pagesTotal, pageCurrent, pages } = props;
 
-    console.log(pages)
     return (
         <Layout>
 

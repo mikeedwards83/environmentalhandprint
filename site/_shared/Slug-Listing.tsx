@@ -64,7 +64,8 @@ export const ListingGetStaticProps = (folder: string, postsPerPage: number, map:
             const folders = fs
                 .readdirSync(folder, { withFileTypes: true })
                 .filter(dirent => dirent.isDirectory())
-                .map(dirent => dirent.name);
+                .map(dirent => dirent.name)
+                .reverse();
 
             const totalPages = Math.ceil(folders
                 .length / postsPerPage);
