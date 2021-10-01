@@ -1,17 +1,16 @@
 import { useRouter } from "next/dist/client/router";
 import React, { useEffect } from "react"
+import { BannerImage } from "../stories/components/BannerImage/BannerImage";
 import Layout from "../stories/components/Layout/Layout";
 import PageError from "../stories/components/PageError/PageError";
 import PageHead from "../stories/components/PageHead/PageHead";
-            
+import PageError404 from "../stories/pages/PageError404/PageError404";
+
 
 const Index = () => {
 
     return (
-            <Layout>
-                <PageHead title={`404 Not Found`} description="We couldn't find the page you were looking for." />              
-                <PageError title="404 Page Not Found" description="We couldn't find the page you were looking for." ></PageError>
-            </Layout>
+       <PageError404 />
     )
 }
 

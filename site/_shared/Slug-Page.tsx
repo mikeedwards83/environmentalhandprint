@@ -26,9 +26,9 @@ export const PageGetStaticPaths = (folder: string): GetStaticPaths => {
 
 }
 
-export const PageGetStaticProps = (folder: string, map: (name:string, data:any) =>any) :GetStaticProps => {
-    
-     const func: GetStaticProps =  async ({ params }) => {
+export const PageGetStaticProps = (folder: string, map: (name: string, data: any) => any): GetStaticProps => {
+
+    const func: GetStaticProps = async ({ params }) => {
         // read markdown file into content and frontmatter
 
         let slug = '';
@@ -46,18 +46,28 @@ export const PageGetStaticProps = (folder: string, map: (name:string, data:any) 
         }
         if (slug) {
             const postFilePath = join(folder, `${slug}/page.mdx`);
-            const fileContents = fs.readFileSync(postFilePath);
-            const { data, content } = matter(fileContents);
 
-            const page  = map(slug, data);
+            if (fs.existsSync(postFilePath)){
+                const fileContents = fs.readFileSync(postFilePath);
+                const { data, content } = matter(fileContents);
 
+                const page = map(slug, data);
+                return {
+                    props: {
+                        page: page,
+                        content: content
+                    },
+                };
+            }
+            else{
+                return {
+                    props: {
+                        page: null,
+                        content: null
+                    },
+                };
+            }
 
-            return {
-                props: {
-                    page: page,
-                    content: content
-                },
-            };
         }
 
         return {

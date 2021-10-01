@@ -10,6 +10,7 @@ import { ListingGetStaticPaths, ListingGetStaticProps } from '../../_shared/Slug
 import { IBlog } from '../../stories/components/BlogList/IBlog';
 import Layout from '../../stories/components/Layout/Layout';
 import PageHead from '../../stories/components/PageHead/PageHead';
+import { Redirect } from '../../stories/components/Redirect/Redirect';
 
 export const POSTS_PATH = join(process.cwd(), '/public/blogs');
 const postsPerPage = 5;
@@ -17,7 +18,6 @@ const postsPerPage = 5;
 
 export const MapBlog = (name: string, data: any): IBlog => {
 
-    console.log(typeof data.date);
     var post: IBlog = {
         author: data.author.name,
         excerpt: data.excerpt,
@@ -42,25 +42,31 @@ export const getStaticPaths: GetStaticPaths = ListingGetStaticPaths(POSTS_PATH, 
 export const getStaticProps: GetStaticProps = ListingGetStaticProps(POSTS_PATH, postsPerPage, MapBlog)
 
 
+var image ={
+    src: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80",
+    alt: "A green valley with stones"
+};
 
-
-const List = (props: { pageCurrent: number, pagesTotal: number, pages: IBlog[] }) => {
+const List = (props: { pageCurrent: number, pagesTotal: number, pages?: IBlog[] }) => {
 
     const { pagesTotal, pageCurrent, pages } = props;
 
+    console.log(pages)
     return (
         <Layout>
 
-            <PageHead title={`Blogs - Page ${pageCurrent}`} description="Read out latest blog posts." />
+            <PageHead title={`Blogs - Page ${pageCurrent}`} description="Read out latest blog posts." image={image} />
 
             <BannerImage
                 title="Blogs"
-                imageUrl="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
+                image={image}
                 subTitle={`Page ${pageCurrent}`}
             />
             <div className="container pt-5">
 
-                <BlogList posts={pages} pageCurrent={pageCurrent} pagesTotal={pagesTotal} rootFolder="blogs" postFolder="article" />
+                {pages && pages.length > 0 && <BlogList posts={pages} pageCurrent={pageCurrent} pagesTotal={pagesTotal} rootFolder="blogs" postFolder="article" />}
+                
+                {(pageCurrent === undefined || pageCurrent === null) && <Redirect url={'/blogs'}  />}
             </div>
         </Layout>
     );

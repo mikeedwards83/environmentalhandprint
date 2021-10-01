@@ -15,16 +15,14 @@ export const Blog = (props: { blog: IBlog, content: string }) => {
 
     <div>
       <BannerImage
-        imageUrl={blog.image.src}
+        image={blog.image}
         title={blog.title}
-        fpy={blog.image.fpy}
-        fpx={blog.image.fpx}
          className="col-md-8 offset-md-2"
       />
       <div className={`Blog row`}>
         <article className="Blog-Content container" >
           <div className="col-12 col-md-8 offset-md-2 pt-3">
-            <ButtonLink url="/blog">
+            <ButtonLink url="/blogs">
               <FontAwesomeIcon icon={faChevronLeft} />
               &nbsp; Blogs
             </ButtonLink>

@@ -13,7 +13,7 @@ const PageError = (props: {
   } = props;
 
   return (
-    <div className={`PageError ${className}`}>
+    <div className={`PageError py-5 ${className}`}>
       <div>
         <h1>{title}</h1>
         <p>

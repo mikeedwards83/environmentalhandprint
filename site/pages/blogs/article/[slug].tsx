@@ -9,6 +9,7 @@ import { IBlog } from '../../../stories/components/BlogList/IBlog';
 import Layout from '../../../stories/components/Layout/Layout';
 import PageHead from '../../../stories/components/PageHead/PageHead';
 import { PageGetStaticPaths, PageGetStaticProps } from '../../../_shared/Slug-Page';
+import PageError404 from '../../../stories/pages/PageError404/PageError404';
 
 
 export const getStaticPaths: GetStaticPaths = PageGetStaticPaths(POSTS_PATH);
@@ -19,11 +20,19 @@ const Article = (props: { page: IBlog, content: string }) => {
 
     const { page, content } = props;
 
+
     return (
-        <Layout>
-            <PageHead title={`${page.title} - Blog`} description={page.excerpt} />
-            <Blog blog={page} content={content} />
-        </Layout>
+        <>
+            {page && content &&
+                <Layout>
+
+                    <PageHead title={`${page.title} - Blog`} description={page.excerpt} image={page.image} />
+                    <Blog blog={page} content={content} />
+                </Layout>
+
+            }
+            {!page && <PageError404 />}
+        </>
     );
 }
 

@@ -1,16 +1,17 @@
 import { ReactNode } from "react"
+import { IImage } from "../../../ui/interfaces/IImage";
 import { ImageUnsplashBackground } from "../../atoms/ImageUnsplashBackground/ImageUnsplashBackground";
 
-export const BannerImage = (props: { title: string | ReactNode, imageUrl: string, subTitle?: string, fpx?: number, fpy?: number, className?:string }) => {
+export const BannerImage = (props: { title: string | ReactNode, image: IImage, subTitle?: string, className?:string }) => {
 
-    const { title, imageUrl, subTitle, fpx, fpy,className=""} = props;
+    const { title, image, subTitle,className=""} = props;
 
     return (
         <ImageUnsplashBackground
-            imageUrl={imageUrl}
+            imageUrl={image.src}
             crop="FocalPoint"
-            fpx={fpx}
-            fpy={fpy}
+            fpx={image.fpx}
+            fpy={image.fpy}
             className="BannerImage d-flex flex-column justify-content-center align-items-center"
         >
             <div className="container">

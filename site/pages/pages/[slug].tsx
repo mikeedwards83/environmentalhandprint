@@ -42,7 +42,9 @@ const Article = (props: { page: IPage, content: string }) => {
 
     return (
         <Layout>
-            <PageHead title={`${page.title} - Blog`} description={page.excerpt} />
+            <PageHead title={`${page.title} - Blog`} description={page.excerpt} 
+                image={page.image}
+            />
             <BannerImage
                 imageUrl={page.image.src}
                 title={page.title}
