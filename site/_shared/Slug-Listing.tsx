@@ -12,6 +12,7 @@ export const ListingGetStaticPaths = (folder: string, postsPerPage: number): Get
         const folders = fs
             .readdirSync(folder, { withFileTypes: true })
             .filter(dirent => dirent.isDirectory())
+            .filter(dirent => !dirent.name.startsWith("draft"))
             .map(dirent => dirent.name);
 
         const totalPages = folders.length / postsPerPage;
@@ -34,7 +35,7 @@ export const ListingGetStaticPaths = (folder: string, postsPerPage: number): Get
 
 
 
-export const ListingGetStaticProps = (folder: string, postsPerPage: number, map: (name:string, data:any) =>any ): GetStaticProps => {
+export const ListingGetStaticProps = (folder: string, postsPerPage: number, map: (name: string, data: any) => any): GetStaticProps => {
     const func: GetStaticProps = async ({ params }) => {
 
         let slug = '';
@@ -64,6 +65,7 @@ export const ListingGetStaticProps = (folder: string, postsPerPage: number, map:
             const folders = fs
                 .readdirSync(folder, { withFileTypes: true })
                 .filter(dirent => dirent.isDirectory())
+                .filter(dirent => !dirent.name.startsWith("draft"))
                 .map(dirent => dirent.name)
                 .reverse();
 

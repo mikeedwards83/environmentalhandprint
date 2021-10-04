@@ -22,7 +22,7 @@ export const Blog = (props: { blog: IBlog, content: string }) => {
       <div className={`Blog row`}>
         <article className="Blog-Content container" >
           <div className="col-12 col-md-8 offset-md-2 pt-3">
-            <ButtonLink url="/blogs">
+            <ButtonLink url="/blogs/1">
               <FontAwesomeIcon icon={faChevronLeft} />
               &nbsp; Blogs
             </ButtonLink>
