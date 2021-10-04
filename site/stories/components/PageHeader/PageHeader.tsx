@@ -61,7 +61,7 @@ export const PageHeader = (props: {
                 <div className=" d-flex d-lg-none" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto  ">
                         <li className="nav-item text-center ">
-                            <Button className="side-nav-toggler" data-target="sideNav" title="Show/Hide Menu" type={ButtonType.Link}>
+                            <Button className="side-nav-toggler" data-target="sideNav" title="Show/Hide Menu" type={ButtonType.Link}  onClick={handleSideNavOpen} >
                                 <FontAwesomeIcon icon={faBars} />
                                 <span className="pl-2">Menu</span>
                             </Button>
