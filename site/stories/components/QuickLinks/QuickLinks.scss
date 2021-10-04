@@ -8,13 +8,28 @@
         color: white;
     }
     .quickLinks-link {
-        border-right: solid $white 1px;
         padding: 1rem;
+        border-bottom: solid $white 1px;
 
-        &:first-of-type {
+        @include media-breakpoint-up(sm) {
+            border-right: solid $white 1px;
+
             border-left: solid $white 1px;
+
+            &:first-of-type {
+                border-left: solid $white 1px;
+            }
         }
-        p{
+
+        @include media-breakpoint-up(md) {
+            border-left: none;
+
+            &:first-of-type {
+                border-left: solid $white 1px;
+            }
+        }
+
+        p {
             padding-bottom: 2rem;
         }
 
@@ -24,12 +39,13 @@
             display: block;
         }
 
-        img, svg {
+        img,
+        svg {
             width: 30px;
             height: 30px;
             position: absolute;
             right: 1rem;
-            bottom: .5rem;
+            bottom: 0.5rem;
             display: block;
         }
     }
