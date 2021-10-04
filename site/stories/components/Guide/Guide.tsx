@@ -15,10 +15,8 @@ export const Guide = (props: { guide: IGuide, content: string }) => {
 
     <div>
       <BannerImage
-        imageUrl={guide.image.src}
+        image={guide.image}
         title={guide.title}
-        fpy={guide.image.fpy}
-        fpx={guide.image.fpx}
       />
       <div className={`Guide row`}>
         <article className="Guide-Content container" >

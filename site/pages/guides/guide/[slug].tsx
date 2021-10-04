@@ -18,7 +18,7 @@ const Article = (props: { page: IGuide, content: string }) => {
     return (
         <Layout>
 
-            <PageHead title={`${page.title} - Guide`} description={page.excerpt} />
+            <PageHead title={`${page.title} - Guide`} description={page.excerpt} image={page.image} />
 
             <Guide guide={page} content={content} />
 

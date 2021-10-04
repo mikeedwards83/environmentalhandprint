@@ -46,10 +46,8 @@ const Article = (props: { page: IPage, content: string }) => {
                 image={page.image}
             />
             <BannerImage
-                imageUrl={page.image.src}
+                image={page.image}
                 title={page.title}
-                fpy={page.image.fpy}
-                fpx={page.image.fpx}
                 className="col-md-8 offset-md-2"
             />
             <div className="container pt-5">
