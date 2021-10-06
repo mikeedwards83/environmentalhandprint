@@ -16,7 +16,7 @@ const BlogPage = (props: {
       <PageHeader
         title="Environmental Handprint"
         logo="https://media.istockphoto.com/vectors/hand-print-vector-id165761878?k=20&m=165761878&s=612x612&w=0&h=vWMybbPjcI32m3w2Qaiyx1NnMk1COtL1FpaX5_3SJxM="
-        links={[]}
+        links1={[]}
       />
       <BannerVideo
                 videoId="489517523"
