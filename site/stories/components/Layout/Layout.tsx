@@ -9,6 +9,7 @@ import CookieBanner from "../CookieBanner/CookieBanner";
 import GoogleAnalytics from "../GoogleAnalytics/GoogleAnalytics";
 import { ILink } from "../../../ui/interfaces/ILink";
 import { faTree } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 config.autoAddCss = false;
 
 export const Layout = (props: { children?: ReactNode }) => {
@@ -40,6 +41,9 @@ export const Layout = (props: { children?: ReactNode }) => {
   
     twitter: {
       url: "https://twitter.com/handprintearth"
+    },
+    instagram:{
+      url: "https://www.instagram.com/handprintearth/"
     }
   };
 
@@ -47,6 +51,18 @@ export const Layout = (props: { children?: ReactNode }) => {
     linkBlog
   ]
 
+  const socialLinks:ILink[] =[
+    {
+      url:"https://www.instagram.com/handprintearth/",
+      icon: faInstagram,
+      text:"Instagram"
+    },
+    {
+      url:"https://twitter.com/handprintearth",
+      icon: faTwitter,
+      text:"Twitter"
+    }
+  ]
 
 
   return (
@@ -62,7 +78,8 @@ export const Layout = (props: { children?: ReactNode }) => {
           <PageHeader
             title="Environmental Handprint"
             logo="/images/logo-horizontal.svg"
-            links={headerLinks}
+            links1={headerLinks}
+            links2={socialLinks}
           />
           <div className="Layout-Content">
             {children}

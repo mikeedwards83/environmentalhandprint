@@ -10,10 +10,11 @@ import { ScreenSize } from "../../../hooks/useBootstrapSize";
 export const PageHeader = (props: {
     logo: string,
     title: string,
-    links: ILink[]
+    links1: ILink[]
+    links2?: ILink[]
 }) => {
 
-    const { logo, title, links } = props;
+    const { logo, title, links1, links2 } = props;
 
     const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -61,7 +62,7 @@ export const PageHeader = (props: {
                 <div className=" d-flex d-lg-none" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto  ">
                         <li className="nav-item text-center ">
-                            <Button className="side-nav-toggler" data-target="sideNav" title="Show/Hide Menu" type={ButtonType.Link}  onClick={handleSideNavOpen} >
+                            <Button className="side-nav-toggler" data-target="sideNav" title="Show/Hide Menu" type={ButtonType.Link} onClick={handleSideNavOpen} >
                                 <FontAwesomeIcon icon={faBars} />
                                 <span className="pl-2">Menu</span>
                             </Button>
@@ -81,7 +82,7 @@ export const PageHeader = (props: {
                     <ul className="navbar-nav ml-auto">
 
 
-                        {links.map(link =>
+                        {links1.map(link =>
                             <li className="nav-item pr-3" key={link.url}>
 
                                 <a className="nav-link" href={link.url} >
@@ -91,13 +92,29 @@ export const PageHeader = (props: {
                             </li>
                         )}
 
+                        {links2 && <>
+                            <hr />
+
+                            {links2.map(link =>
+
+                                <li className="nav-item pr-3" key={link.url}>
+
+                                    <a className="nav-link" href={link.url} >
+                                        {link.icon && <FontAwesomeIcon icon={link.icon} />}
+                                        {link.text}
+                                    </a>
+                                </li>
+                            )}
+                        </>
+                        }
+
                     </ul>
                     <hr />
                     <div className="text-center">
                         <a className="" href="/">
                             <Image src="/images/logo-horizontal.svg" imageScales={
                                 [
-                                    {size:ScreenSize.SM, height:48, width:202}
+                                    { size: ScreenSize.SM, height: 48, width: 202 }
                                 ]
                             } alt="Environmental Handprint" />
                         </a>
