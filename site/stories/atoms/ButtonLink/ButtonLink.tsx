@@ -10,10 +10,11 @@ export const ButtonLink = (
         type?: "Primary" | "PrimaryWhite" | "Secondary",
         size?: "Small" | "Normal" | "Large",
         children: ReactNode,
+        className?:string
 
     }) => {
 
-    const { url, children, type = "Primary", size = "Normal" } = props;
+    const { url, children, type = "Primary", size = "Normal", className="" } = props;
     const [typeClass, setTypeClass] = useState("btn-primary");
     const [sizeClass, setSizeClass] = useState("");
 
@@ -54,7 +55,7 @@ export const ButtonLink = (
     }, [size])
 
     return (
-        <a href={url} className={`btn ${typeClass} ${sizeClass}`}> {children}</a>
+        <a href={url} className={`btn ${typeClass} ${sizeClass} ${className}`}> {children}</a>
     )
 
 }

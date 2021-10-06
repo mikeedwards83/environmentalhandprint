@@ -1,4 +1,4 @@
-import { IImage } from "../../../ui/interfaces/IImage";
+import { IImage } from "../../ui/interfaces/IImage";
 
 export interface IBlog {
     title: string,
@@ -7,4 +7,5 @@ export interface IBlog {
     author: string
     image: IImage,
     date:string
+    url:string
   }

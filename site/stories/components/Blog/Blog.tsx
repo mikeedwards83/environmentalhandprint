@@ -1,10 +1,10 @@
 import { faCalendarWeek, faChevronLeft, faPaw } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { ReactNode } from "react"
+import { IBlog } from "../../../services/Blogs/IBlog";
 
 import { ButtonLink } from "../../atoms/ButtonLink/ButtonLink";
 import { BannerImage } from "../BannerImage/BannerImage";
-import { IBlog } from "../BlogList/IBlog";
 import Markdown from "../Markdown/Markdown";
 
 export const Blog = (props: { blog: IBlog, content: string }) => {

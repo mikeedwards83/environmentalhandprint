@@ -1,45 +1,25 @@
-import fs from 'fs';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import React from 'react';
 import { BlogList } from '../../stories/components/BlogList/BlogList';
-import { convertToInt } from '../../utils/int';
-import { join } from 'path';
-import matter from 'gray-matter';
 import { BannerImage } from '../../stories/components/BannerImage/BannerImage';
 import { ListingGetStaticPaths, ListingGetStaticProps } from '../../_shared/Slug-Listing';
-import { IBlog } from '../../stories/components/BlogList/IBlog';
 import Layout from '../../stories/components/Layout/Layout';
 import PageHead from '../../stories/components/PageHead/PageHead';
 import { Redirect } from '../../stories/components/Redirect/Redirect';
+import { BlogService, POSTS_PATH } from '../../services/Blogs/blogsService';
+import { IBlog } from '../../services/Blogs/IBlog';
 
-export const POSTS_PATH = join(process.cwd(), '/public/blogs');
+import fs from 'fs';
+
+
 const postsPerPage = 5;
 
-
-export const MapBlog = (name: string, data: any): IBlog => {
-
-    var post: IBlog = {
-        author: data.author.name,
-        excerpt: data.excerpt,
-        title: data.title,
-        image: {
-            src: data.image.src,
-            alt: data.image.alt,
-            fpx: data.image.fpx ? data.image.fpx : null,
-            fpy: data.image.fpy ? data.image.fpy : null,
-        },
-        date: data.date,
-        name: name
-    }
-
-    return post;
-}
 
 
 export const getStaticPaths: GetStaticPaths = ListingGetStaticPaths(POSTS_PATH, postsPerPage);
 
 
-export const getStaticProps: GetStaticProps = ListingGetStaticProps(POSTS_PATH, postsPerPage, MapBlog)
+export const getStaticProps: GetStaticProps = ListingGetStaticProps(POSTS_PATH, postsPerPage, new BlogService().mapBlog)
 
 
 var image ={

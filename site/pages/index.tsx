@@ -1,24 +1,44 @@
 import type { NextPage } from 'next'
-import { BannerVideo } from '../stories/components/BannerVideo/BannerVideo'
-import { PageHeader } from '../stories/components/PageHeader/PageHeader'
 import videoThumb from '../public/images/bannerVideo/VideoThumb.jpg'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../stories/components/Layout/Layout'
 import PageHead from '../stories/components/PageHead/PageHead'
 import { TextImage } from '../stories/components/TextImage/TextImage'
 import Arrow from '../stories/components/Arrow/Arrow'
 import Section from '../stories/atoms/Section/Section'
 import { IQuickLink, QuickLinks } from '../stories/components/QuickLinks/QuickLinks'
-import { faCrow, faFrog, faKiwiBird, faOtter } from '@fortawesome/free-solid-svg-icons'
-import CalloutHorizontal from '../stories/components/CalloutsHorizontal/CalloutsHorizontal'
+import { faChevronRight, faCrow, faFrog, faKiwiBird, faOtter } from '@fortawesome/free-solid-svg-icons'
 import CalloutsHorizontal from '../stories/components/CalloutsHorizontal/CalloutsHorizontal'
 import { ICallout } from '../stories/components/Callout/Callout'
-import { Button } from '../stories/atoms/Button/Button'
-import { ButtonLink } from '../stories/atoms/ButtonLink/ButtonLink'
 import { BannerImage } from '../stories/components/BannerImage/BannerImage'
 import { IImage } from '../ui/interfaces/IImage'
+import { BlogService } from '../services/Blogs/blogsService'
+import { unsplashUrl } from '../utils/unsplash'
+import { ButtonLink } from '../stories/atoms/ButtonLink/ButtonLink'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IBlog } from '../services/Blogs/IBlog'
 
-const Home: NextPage = () => {
+
+
+export async function getStaticProps() {
+
+  const blogsService = new BlogService();
+
+  const posts = blogsService.getLatest(3)
+
+  return {
+    props: {
+      posts
+    }
+  }
+
+}
+
+const Home = (props: { posts: IBlog[] }) => {
+
+  const {
+    posts
+  } = props;
 
 
   const banner = {
@@ -86,12 +106,28 @@ const Home: NextPage = () => {
 
   ]
 
-  var image: IImage =  {
-    src: "https://images.unsplash.com/photo-1622539336639-8a04cb5c3eeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80", 
+  var image: IImage = {
+    src: "https://images.unsplash.com/photo-1622539336639-8a04cb5c3eeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1674&q=80",
     alt: "Man holding his hand up with 'How Big Is Your Handprint' written on it",
     fpy: 0.55,
     fpx: 0.2
   };
+
+
+  const mapBlogToCallout = (post: IBlog): ICallout => {
+    return {
+      src: unsplashUrl(post.image.src, "Crop", "FocalPoint", 60, 300),
+      alt: post.image.alt,
+      title: post.title,
+      children: <>
+        <p>
+          {post.excerpt}
+        </p>
+        <ButtonLink url={post.url} type="PrimaryWhite" className="w-100">Read <FontAwesomeIcon icon={faChevronRight} /></ButtonLink>
+      </>
+    };
+  };
+
 
   return (
     <Layout >
@@ -125,6 +161,20 @@ const Home: NextPage = () => {
         </TextImage>
       </div>
       <Section color="dark">
+        <div className="container">
+          <CalloutsHorizontal callouts={posts.map(post => mapBlogToCallout(post))} title={"Our latest blogs"} />
+        </div>
+      </Section>
+      <div className="container">
+        <TextImage imageUrl={'/images/home/hands.jpg'} imageText={''} side={"right"} >
+          <h3>What Colour Is Your Handprint?</h3>
+          <p className="lead">
+            Your handprint comes in a range of different colours. Find out which colour your action is and how it makes a difference.
+          </p>
+          <p><strong>Discover More - Coming Soon</strong></p>
+        </TextImage>
+      </div>
+      <Section color="dark">
 
 
         <div className="container">
@@ -134,16 +184,7 @@ const Home: NextPage = () => {
 
         </div>
       </Section>
-      <div className="container">
 
-        <TextImage imageUrl={'/images/home/hands.jpg'} imageText={''} side={"right"} >
-          <h3>What Colour Is Your Handprint?</h3>
-          <p className="lead">
-            Your handprint comes in a range of different colours. Find out which colour your action is and how it makes a difference.
-          </p>
-          <p><strong>Discover More - Coming Soon</strong></p>
-        </TextImage>
-      </div>
     </Layout >
 
   )
