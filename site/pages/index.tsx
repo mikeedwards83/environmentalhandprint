@@ -161,7 +161,7 @@ const Home = (props: { posts: IBlog[] }) => {
             Most of all, we want you to <strong>enjoy</strong> helping our planet and have <strong>fun</strong>.
           </p>
           <p className="lead">
-            So let's start a <strong>positive metaphor</strong> and a <strong>positive conversation</strong> about what we can do, 
+            So let&#39;s start a <strong>positive metaphor</strong> and a <strong>positive conversation</strong> about what we can do, 
             and where we want to go.
           </p>
         </TextImage>
