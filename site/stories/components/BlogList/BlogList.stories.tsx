@@ -77,7 +77,6 @@ Default.args = {
   ],
   pageCurrent: 2,
   pagesTotal: 5,
-  postFolder:"articles",
   rootFolder:"blogs"
 
 };
