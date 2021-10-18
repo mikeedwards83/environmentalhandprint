@@ -83,7 +83,7 @@ const Home = (props: { posts: IBlog[] }) => {
       alt: "",
       src: "/images/home/grow.png",
       children: <p className="lead">
-        Growing your handprint is easy, and can be done with everyday small actions and large challenging actions actions.
+        Growing your handprint is easy, and can be done with everyday small actions and large challenging actions.
       </p>
     },
     {
@@ -141,8 +141,8 @@ const Home = (props: { posts: IBlog[] }) => {
           <TextImage imageUrl={'/images/home/PeopleWithHandprint.jpg'} imageText={'People doing environmentally positive actions like cycling and recycling'} side={"right"} className="mt-3" >
             <h3>What is your handprint?</h3>
             <p className="lead">
-              The <strong>Environmental Handprint</strong> represents the positive actions we take to make a our world a little better.
-            </p>            
+              The <strong>Environmental Handprint</strong> represents the positive actions we take to make our world a little better.
+            </p>
             <p className="lead">
               From small, everyday actions like turning the lights off and picking up litter to huge actions such as planting trees or switching to a renewable energy supplier.
             </p>
@@ -155,16 +155,16 @@ const Home = (props: { posts: IBlog[] }) => {
         <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={'Selection of photographs showing people helping the planet'} side={"left"} >
           <h3>Why?</h3>
           <p className="lead">
-            We want you to be proud and celebrate the contribution you are making to the planet and to have <strong>positive conversations</strong> about
-            the changes we can all make.
+            We want everyone to be proud and celebrate the contributions they are making.
           </p>
           <p className="lead">
-            We have many negative metaphors around the environment, carbon footprint, global warming, land grabbing; So let's start with a <strong>positive metaphor</strong>, one that
-            recognises our efforts and points us in the direction we want to go.
+            Most of all, we want you to <strong>enjoy</strong> helping our planet and have <strong>fun</strong>.
+          </p>
+          <p className="lead">
+            So let's start a <strong>positive metaphor</strong> and a <strong>positive conversation</strong> about what we can do, 
+            and where we want to go.
           </p>
         </TextImage>
-
-
 
       </div>
 
@@ -178,9 +178,9 @@ const Home = (props: { posts: IBlog[] }) => {
 
         <TextImage imageUrl={'/images/home/atwork.jpg'} imageText={'Man sitting working on a laptop'} side={"right"} >
 
-          <h3>Work in progesss</h3>
+          <h3>Work in progess</h3>
           <p className="lead">
-            The Environmental Handprint is run by a small team of environmentally minded individuals in our spare time. We love to hear you suggestions and feedback.
+            The Environmental Handprint is run by a small team of environmentally minded individuals in our spare time. We love to hear your suggestions and feedback.
           </p>
           <p className="lead">
             Most of all we want <strong>you</strong> to <strong>enjoy</strong> making our world a better and cleaner place to live.
