@@ -27,14 +27,14 @@ const PageHead = (props: {
 
   return (
     <Head>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
+      <title key="title">{fullTitle}</title>
+      <meta key="description" name="description" content={description} />
 
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:image" content={imgUrl} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      {image.alt && <meta property="og:image:alt" content={image.alt} />}
+      <meta key="og:title" property="og:title" content={fullTitle} />
+      <meta key="og:image" property="og:image" content={imgUrl} />
+      <meta key="og:image:width" property="og:image:width" content="1200" />
+      <meta key="og:image:height" property="og:image:height" content="630" />
+      {image.alt && <meta key="og:image:alt" property="og:image:alt" content={image.alt} />}
 
       {children}
     </Head>

@@ -43,7 +43,7 @@ const List = (props: { pageCurrent: number, pagesTotal: number, pages?: IBlog[] 
             />
             <div className="container pt-5">
 
-                {pages && pages.length > 0 && <BlogList posts={pages} pageCurrent={pageCurrent} pagesTotal={pagesTotal} rootFolder="blogs" postFolder="article" />}
+                {pages && pages.length > 0 && <BlogList posts={pages} pageCurrent={pageCurrent} pagesTotal={pagesTotal} rootFolder="blogs"  />}
                 
                 {(pageCurrent === undefined || pageCurrent === null) && <Redirect url={'/blogs'}  />}
             </div>

@@ -5,7 +5,7 @@ import { join } from 'path';
 import matter from 'gray-matter';
 
 
-export const PageGetStaticPaths = (folder: string): GetStaticPaths => {
+export const PageGetStaticPaths = (folder: string, nameFormat: (name:string)=>string  = name=>name): GetStaticPaths => {
 
     const func: GetStaticPaths = async () => {
 
@@ -13,11 +13,12 @@ export const PageGetStaticPaths = (folder: string): GetStaticPaths => {
             .readdirSync(folder, { withFileTypes: true })
             .filter(dirent => dirent.isDirectory())
             .map(dirent => dirent.name)
+            .map(name => nameFormat(name))
             .map((slug) => ({ params: { slug } }));
 
         return {
             paths: folders,
-            fallback: 'blocking',
+            fallback: false,
         };
     };
 
@@ -26,7 +27,7 @@ export const PageGetStaticPaths = (folder: string): GetStaticPaths => {
 
 }
 
-export const PageGetStaticProps = (folder: string, map: (name: string, data: any) => any): GetStaticProps => {
+export const PageGetStaticProps = (rootFolder: string, map: (name: string, data: any) => any, folderFilter: ( slug:string,name:string)=> boolean = (slug, name )=> name===slug): GetStaticProps => {
 
     const func: GetStaticProps = async ({ params }) => {
         // read markdown file into content and frontmatter
@@ -45,28 +46,39 @@ export const PageGetStaticProps = (folder: string, map: (name: string, data: any
             }
         }
         if (slug) {
-            const postFilePath = join(folder, `${slug}/page.mdx`);
 
-            if (fs.existsSync(postFilePath)){
-                const fileContents = fs.readFileSync(postFilePath);
-                const { data, content } = matter(fileContents);
+            const folders = fs
+                .readdirSync(rootFolder, { withFileTypes: true })
+                .filter(dirent => dirent.isDirectory())
+                .filter(dirent => folderFilter( slug,dirent.name));
 
-                const page = map(slug, data);
-                return {
-                    props: {
-                        page: page,
-                        content: content
-                    },
-                };
+            if (folders.length > 0) {
+
+                const folder = folders[0];
+
+                const postFilePath = join(rootFolder, `${folder.name}/page.mdx`);
+
+                if (fs.existsSync(postFilePath)) {
+                    const fileContents = fs.readFileSync(postFilePath);
+                    const { data, content } = matter(fileContents);
+
+                    const page = map(slug, data);
+                    return {
+                        props: {
+                            page: page,
+                            content: content
+                        },
+                    };
+                }
             }
-            else{
-                return {
-                    props: {
-                        page: null,
-                        content: null
-                    },
-                };
-            }
+
+
+            return {
+                props: {
+                    page: null,
+                    content: null
+                },
+            };
 
         }
 

@@ -9,9 +9,9 @@ import { BlogService, POSTS_PATH } from '../../../services/Blogs/blogsService';
 import { IBlog } from '../../../services/Blogs/IBlog';
 
 
-export const getStaticPaths: GetStaticPaths = PageGetStaticPaths(POSTS_PATH);
+export const getStaticPaths: GetStaticPaths = PageGetStaticPaths(POSTS_PATH, new BlogService().formatName);
 
-export const getStaticProps: GetStaticProps = PageGetStaticProps(POSTS_PATH, new BlogService().mapBlog);
+export const getStaticProps: GetStaticProps = PageGetStaticProps(POSTS_PATH, new BlogService().mapBlog, (slug, name)=> name.endsWith(slug));
 
 const Article = (props: { page: IBlog, content: string }) => {
 

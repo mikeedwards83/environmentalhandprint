@@ -13,30 +13,28 @@ export const BlogList = (props: {
   pageCurrent: number,
   pagesTotal: number,
   rootFolder: string
-  postFolder: string
 }) => {
 
-  const { pageCurrent, pagesTotal, posts, rootFolder, postFolder } = props;
+  const { pageCurrent, pagesTotal, posts, rootFolder } = props;
 
   return (
     <div className={`BlogList`}>
 
-      {posts.map(post => <BlogListItem key={post.name} folder={`${rootFolder}/${postFolder}`} blog={post} />)}
+      {posts.map(post => <BlogListItem key={post.name} blog={post} />)}
 
       <Pagination pageCurrent={pageCurrent} pagesTotal={pagesTotal} url={`/${rootFolder}`} className="pt-3" />
     </div>
   )
 }
 
-const BlogListItem = (props: { folder: string, blog: IBlog }) => {
+const BlogListItem = (props: {  blog: IBlog }) => {
 
   const {
     blog,
-    folder
   } = props;
 
   return (
-    <Link url={`/${folder}/${blog.name}`} className="BlogList-Item d-flex flex-row" noDecoration>
+    <Link url={blog.url} className="BlogList-Item d-flex flex-row" noDecoration>
       <div className="">
         <ImageUnsplash src={blog.image.src} alt={blog.image.alt} width={150} height={150} fpy={blog.image.fpy} fpx={blog.image.fpx} />
       </div>

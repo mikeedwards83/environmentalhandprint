@@ -137,32 +137,65 @@ const Home = (props: { posts: IBlog[] }) => {
       <QuickLinks links={quickLinks} />
       <div className="container">
         <Arrow>
-          <TextImage imageUrl={'/images/home/PeopleWithHandprint.jpg'} imageText={''} side={"right"} >
+
+          <TextImage imageUrl={'/images/home/PeopleWithHandprint.jpg'} imageText={'People doing environmentally positive actions like cycling and recycling'} side={"right"} className="mt-3" >
             <h3>What is your handprint?</h3>
             <p className="lead">
-              Your <strong>Environmental Handprint</strong> represents <u>all</u> the positive actions you have take to help our planet.
-
+              The <strong>Environmental Handprint</strong> represents the positive actions we take to make a our world a little better.
+            </p>            
+            <p className="lead">
+              From small, everyday actions like turning the lights off and picking up litter to huge actions such as planting trees or switching to a renewable energy supplier.
             </p>
             <p className="lead">
-              From everyday small actions like turning lights off and picking up litter to huge actions like getting out and planting trees or by an electric car.
+              We want to celebrate these actions and encourage change through positive conversations.
             </p>
+
           </TextImage>
         </Arrow>
-        <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={''} side={"left"} >
+        <TextImage imageUrl={'/images/home/home-projects.jpg'} imageText={'Selection of photographs showing people helping the planet'} side={"left"} >
           <h3>Why?</h3>
           <p className="lead">
-            We want you to be proud and celebrate the contribution you are making to planet and to have <strong>positive conversations</strong> about
+            We want you to be proud and celebrate the contribution you are making to the planet and to have <strong>positive conversations</strong> about
             the changes we can all make.
           </p>
           <p className="lead">
-            We have many negative metaphors around the environment, carbon footprint, global warming, land grabbing; So lets start a <strong>positive metaphor</strong>, one that
+            We have many negative metaphors around the environment, carbon footprint, global warming, land grabbing; So let's start with a <strong>positive metaphor</strong>, one that
             recognises our efforts and points us in the direction we want to go.
           </p>
         </TextImage>
+
+
+
       </div>
+
+
       <Section color="dark">
         <div className="container">
           <CalloutsHorizontal callouts={posts.map(post => mapBlogToCallout(post))} title={"Our latest blogs"} />
+        </div>
+      </Section>
+      <div className="container">
+
+        <TextImage imageUrl={'/images/home/atwork.jpg'} imageText={'Man sitting working on a laptop'} side={"right"} >
+
+          <h3>Work in progesss</h3>
+          <p className="lead">
+            The Environmental Handprint is run by a small team of environmentally minded individuals in our spare time. We love to hear you suggestions and feedback.
+          </p>
+          <p className="lead">
+            Most of all we want <strong>you</strong> to <strong>enjoy</strong> making our world a better and cleaner place to live.
+          </p>
+        </TextImage>
+      </div>
+
+      <Section color="dark">
+
+
+        <div className="container">
+
+          <CalloutsHorizontal callouts={callouts} title={""} />
+
+
         </div>
       </Section>
       <div className="container">
@@ -174,17 +207,6 @@ const Home = (props: { posts: IBlog[] }) => {
           <p><strong>Discover More - Coming Soon</strong></p>
         </TextImage>
       </div>
-      <Section color="dark">
-
-
-        <div className="container">
-
-          <CalloutsHorizontal callouts={callouts} title={""} />
-
-
-        </div>
-      </Section>
-
     </Layout >
 
   )

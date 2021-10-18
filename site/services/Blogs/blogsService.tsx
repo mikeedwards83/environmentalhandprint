@@ -10,8 +10,15 @@ export const POSTS_PATH = join(process.cwd(), '/public/blogs');
 export const BLOG_URL = "/blogs";
 export const BLOG_ARTICLE_URL = "/blogs/article";
 
+const nameRegex = /^\d{6}-/
+
 
 export class BlogService {
+
+    formatName = (name:string):string=>{
+        return name.replace(nameRegex, "")
+    }
+
 
     getLatest(number: number): IBlog[] {
         const folders = fs
@@ -50,7 +57,7 @@ export class BlogService {
             },
             date: data.date,
             name: name,
-            url: `${BLOG_ARTICLE_URL}/${name}`
+            url: `${BLOG_ARTICLE_URL}/${this.formatName(name)}`
         }
 
 
