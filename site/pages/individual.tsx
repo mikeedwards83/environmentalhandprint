@@ -44,7 +44,7 @@ const individual = () => {
                 </TextImage>
 
                 <TextImage imageUrl={"https://images.unsplash.com/photo-1544787219-2c5077fcfcf1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1742&q=80"} imageText={""} side={"right"} className="mt-5" fpy={0.9} >
-                    <h2>Growing a habit</h2>
+                    <h2 id="habit">Growing a habit</h2>
                     <p>
                         We know that forming habits is hard (the good ones anyway, bad habits seem to form easily!), but forming habits is important because our actions are no longer one-off - they become part of who we are and how we see the world.
                     </p>
@@ -53,7 +53,7 @@ const individual = () => {
                     </p>
                 </TextImage>
                 <TextImage imageUrl={"/images/peoplechating.svg"} imageText={"People talking about their Handprints"} side={"left"} className="mt-5">
-                    <h2>A Positive Conversation
+                    <h2 id="positive">A Positive Conversation
                     </h2>
                     <p>
                         Positive conversations are amazing. We love talking with our friends, family, the random person you always talk to on the bus who just wants to sleep. Positive conversations are easier to start and engage people with (this statement does not apply to social media).
@@ -70,7 +70,7 @@ const individual = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
-                            <h2>
+                            <h2 id="money">
                                 Where Your Money Goes
                             </h2>
                             <p>
@@ -87,7 +87,7 @@ const individual = () => {
             <div className="container">
 
                 <TextImage imageUrl={"/images/peoplehelpingeachother.svg"} imageText={"People helping each other to climb blocks"} side={"right"} className="mt-5">
-                    <h2>
+                    <h2 id="together">
                         Working Together
 
                     </h2>
@@ -119,7 +119,7 @@ const individual = () => {
                     </p>
                 </TextImage>
                 <TextImage imageUrl={"https://images.unsplash.com/photo-1622539354515-e207f88e1074?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"} imageText={"Lady holding here hand up to the camera"} side={"left"} className="my-5">
-                    <h2>
+                    <h2 id="physical">
                         Something Physical
 
                     </h2>
