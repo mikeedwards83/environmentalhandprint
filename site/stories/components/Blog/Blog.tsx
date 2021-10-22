@@ -30,7 +30,7 @@ export const Blog = (props: { blog: IBlog, content: string }) => {
               <FontAwesomeIcon icon={faCalendarWeek} /> {new Date(blog.date).toLocaleDateString()} <FontAwesomeIcon icon={faPaw} /> {blog.author}
             </div>
             <div className="pt-3">
-              <Markdown content={content} />
+              <Markdown children={content} />
             </div>
           </div>
         </article>

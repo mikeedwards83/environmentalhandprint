@@ -26,7 +26,7 @@ const Callout = (props: {
     <div className={`Callout callout-card ${className} `}>
       <Image src={callout.src} alt={callout.alt} className="m-auto" imageScales={
         [
-          { height: "250px", width: "316px", size: ScreenSize.MD }
+          { height: 250,width: 316, size: ScreenSize.MD }
         ]
       } />
 

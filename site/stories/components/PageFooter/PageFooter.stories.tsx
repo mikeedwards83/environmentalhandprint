@@ -52,16 +52,6 @@ Default.args = {
     }
   ],
   copyRight: "© 2021 - Environmental Handprint, All Rights Reserved",
-  instagram: {
-    url: "http://"
-  },
-  facebook: {
-    url: "http://"
-  },
-  twitter: {
-    url: "http://"
-  }
-
 
 
 };

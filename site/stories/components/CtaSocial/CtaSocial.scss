@@ -1,0 +1,12 @@
+@import "./../../../styles/Include.scss";
+
+.CtaSocial{
+
+    border: solid $brand-red 4px;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    .svg-inline--fa{
+        font-size: 3rem;
+    }
+}

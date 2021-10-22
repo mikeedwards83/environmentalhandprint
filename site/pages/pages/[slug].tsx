@@ -42,7 +42,7 @@ const Article = (props: { page: IPage, content: string }) => {
 
     return (
         <Layout>
-            <PageHead title={`${page.title} - Blog`} description={page.excerpt} 
+            <PageHead title={`${page.title} - Blog`} description={page.excerpt}
                 image={page.image}
             />
             <BannerImage
@@ -51,7 +51,7 @@ const Article = (props: { page: IPage, content: string }) => {
                 className="col-md-8 offset-md-2"
             />
             <div className="container pt-5">
-                <Markdown content={content} />
+                <Markdown >{content}</Markdown>
             </div>
         </Layout>
     );

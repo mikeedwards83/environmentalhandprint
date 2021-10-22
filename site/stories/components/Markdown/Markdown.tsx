@@ -5,19 +5,19 @@ import rehypeRaw from 'rehype-raw'
 
 const Markdown = (props: {
   className?: string
-  content:string
+  children:string
 }) => {
 
   const {
     className = "",
-    content
+    children
   } = props;
 
-  console.log(content)
+  console.log(children)
 
   return (
     <div className={`Markdown ${className}`}>
-      <ReactMarkdown children={content} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}  />
+      <ReactMarkdown children={children} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}  />
     </div>
   )
 }

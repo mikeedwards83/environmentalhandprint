@@ -1,10 +1,11 @@
 import { CSSProperties, useEffect, useState } from "react";
 import { ScreenSize, useBootstrapSize } from "../../../hooks/useBootstrapSize";
+import { ImageUnsplash } from "../ImageUnsplash/ImageUnsplash";
  
 export interface IImageScale {
     size: ScreenSize;
-    width?: string|number;
-    height?: string|number;
+    width: number;
+    height: number;
 }
 export type ImageSrc = StaticImageData | string;
 
@@ -14,7 +15,9 @@ export const Image = (props: {
     alt?: string,
     imageScales?: IImageScale[],
     defaultMobile?: ScreenSize
-    defaultDesktop?: ScreenSize
+    defaultDesktop?: ScreenSize,
+    fpy?: number,
+    fpx?: number,
 }) => {
 
     const {
@@ -24,6 +27,9 @@ export const Image = (props: {
         imageScales = [],
         defaultMobile = ScreenSize.XS,
         defaultDesktop = ScreenSize.MD,
+        fpy,
+        fpx
+
     } = props;
 
 
@@ -47,7 +53,9 @@ export const Image = (props: {
 
         if(!imageScales || imageScales.length === 0){
             return {
-                size:ScreenSize.SM
+                size:ScreenSize.SM,
+                width:-1,
+                height:-1
             }
         }
 
@@ -87,8 +95,8 @@ export const Image = (props: {
     return (
         <>
 
-            <ImageRender className={`${className} d-md-none m-auto `} scale={mobileScale} url={url} alt={alt} />
-            <ImageRender className={`${className} d-none d-md-block m-auto `} scale={desktopScale} url={url} alt={alt} />
+            <ImageRender className={`${className} d-md-none m-auto `} scale={mobileScale} url={url} alt={alt} fpy={fpy} fpx={fpx} />
+            <ImageRender className={`${className} d-none d-md-block m-auto `} scale={desktopScale} url={url} alt={alt} fpy={fpy} fpx={fpx}  />
         </>
     )
 }
@@ -99,14 +107,18 @@ const ImageRender = (props: {
     className: string,
     scale: IImageScale,
     url: string
-    alt?: string
+    alt?: string,
+    fpy?: number,
+    fpx?: number,
 }) => {
 
     const {
         className,
         scale,
         url,
-        alt
+        alt,
+        fpx,
+        fpy
     } = props;
 
     const style: CSSProperties = {
@@ -123,7 +135,7 @@ const ImageRender = (props: {
     }
 
     return (
-        <img src={url} className={`Image ${className}`} alt={alt} width={getMeasurement(scale?.width)} height={getMeasurement(scale?.height)} style={style} />
+        <ImageUnsplash src={url}  className={`Image ${className}`}  alt={alt} width={scale.width} height={scale.height} style={style} fpy={fpy} fpx={fpx}  />
     )
 }
 

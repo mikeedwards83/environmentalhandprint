@@ -1,9 +1,9 @@
-import { ReactNode, useEffect, useState } from "react"
+import { CSSProperties, ReactNode, useEffect, useState } from "react"
 import { Crop, Fit, unsplashUrl } from "../../../utils/unsplash";
 
 export const ImageUnsplash = (props: {
   src: string,
-  alt: string,
+  alt?: string,
   width: number,
   height?: number,
   className?: string,
@@ -12,9 +12,10 @@ export const ImageUnsplash = (props: {
   crop?: Crop,
   fpy?: number,
   fpx?: number,
+  style?: CSSProperties
 }) => {
 
-  const { src, width, height, className = "", fit = "Crop", quality = 60, crop = "Unset", fpy, fpx, alt } = props;
+  const { src, width, height, className = "", fit = "Crop", quality = 60, crop = "Unset", fpy, fpx, alt, style } = props;
 
 
   const [url, setUrl] = useState<string>("");
@@ -32,7 +33,7 @@ export const ImageUnsplash = (props: {
 
   return (
     <>
-      {url && <img className={`ImageUnsplash ${className}`} src={url} alt={alt} />}
+      {url && <img className={`ImageUnsplash ${className}`} src={url} alt={alt} style={style} />}
     </>
   )
 }

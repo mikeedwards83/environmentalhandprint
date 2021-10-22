@@ -10,6 +10,7 @@ import GoogleAnalytics from "../GoogleAnalytics/GoogleAnalytics";
 import { ILink } from "../../../ui/interfaces/ILink";
 import { faTree } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { Constants } from "../../../Contants";
 config.autoAddCss = false;
 
 export const Layout = (props: { children?: ReactNode }) => {
@@ -38,13 +39,6 @@ export const Layout = (props: { children?: ReactNode }) => {
       linkPrivacyPolicy
     ],
     copyRight: "© 2021 - Environmental Handprint, All Rights Reserved",
-  
-    twitter: {
-      url: "https://twitter.com/handprintearth"
-    },
-    instagram:{
-      url: "https://www.instagram.com/handprintearth/"
-    }
   };
 
   const headerLinks = [
@@ -53,14 +47,14 @@ export const Layout = (props: { children?: ReactNode }) => {
 
   const socialLinks:ILink[] =[
     {
-      url:"https://www.instagram.com/handprintearth/",
+      url: Constants.socialMedia.instagram.url,
       icon: faInstagram,
-      text:"Instagram"
+      text:Constants.socialMedia.instagram.text
     },
     {
-      url:"https://twitter.com/handprintearth",
+      url: Constants.socialMedia.twitter.url,
       icon: faTwitter,
-      text:"Twitter"
+      text:Constants.socialMedia.twitter.text
     }
   ]
 
