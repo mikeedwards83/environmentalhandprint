@@ -53,7 +53,11 @@ const Home = (props: { posts: IBlog[] }) => {
     {
       title: "Your individual handprint",
       text: "Find out how you can add to your unique handprint.",
-      icon: faOtter
+      icon: faOtter,
+      link:{
+        text: "Discover More",
+        url:"/individual",
+      }
     },
     {
       title: "Your business handprint",

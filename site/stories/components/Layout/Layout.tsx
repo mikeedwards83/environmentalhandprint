@@ -8,7 +8,7 @@ import ShareThis from "../ShareThis/ShareThis";
 import CookieBanner from "../CookieBanner/CookieBanner";
 import GoogleAnalytics from "../GoogleAnalytics/GoogleAnalytics";
 import { ILink } from "../../../ui/interfaces/ILink";
-import { faTree } from "@fortawesome/free-solid-svg-icons";
+import { faOtter, faTree, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { Constants } from "../../../Contants";
 config.autoAddCss = false;
@@ -33,7 +33,8 @@ export const Layout = (props: { children?: ReactNode }) => {
 
   const footer = {
     links1: [
-      linkBlog
+      linkBlog,
+    
     ],
     links2: [
       linkPrivacyPolicy
@@ -42,6 +43,11 @@ export const Layout = (props: { children?: ReactNode }) => {
   };
 
   const headerLinks = [
+    {
+      text:"Your Handprint",
+      url:"/individual",
+      icon:faOtter
+    },
     linkBlog
   ]
 
