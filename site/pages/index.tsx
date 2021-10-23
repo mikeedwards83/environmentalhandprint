@@ -80,6 +80,49 @@ const Home = (props: { posts: IBlog[] }) => {
 
   ]
 
+  const typesShortcuts: ICallout[] = [
+    {
+      title: "Your Handprint",
+      alt: "",
+      src: "/images/individual.svg",
+      children: <p className="lead">
+       Find out how you can add to your unique handprint.
+      </p>,
+      link:{
+        text:"Discover More",
+        url:"/individual"
+      }
+    },
+    {
+      title: "Company Handprints",
+      alt: "",
+      src: "/images/company.svg",
+      children: <p className="lead">
+        Grow the handprint of your company and customers.
+      </p>,
+      
+    },
+    {
+      title: "Community Handprints",
+      alt: "",
+      src: "/images/community.svg",
+      children: <p className="lead">
+       Bring your community together to make a difference.
+      </p>,
+     
+    },
+    {
+      title: "NGO Handprints",
+      alt: "",
+      src: "/images/ngo.svg",
+      children: <p className="lead">
+      How can your organisation help grow handprints.
+      </p>,
+     
+
+    }
+  ]
+
 
   const callouts: ICallout[] = [
     {
@@ -127,7 +170,7 @@ const Home = (props: { posts: IBlog[] }) => {
         <p>
           {post.excerpt}
         </p>
-        <ButtonLink url={post.url} type="PrimaryWhite" className="w-100">Read <FontAwesomeIcon icon={faChevronRight} /></ButtonLink>
+        <ButtonLink url={post.url} type="PrimaryWhite" className="w-90">Read <FontAwesomeIcon icon={faChevronRight} /></ButtonLink>
       </>
     };
   };
@@ -175,7 +218,7 @@ const Home = (props: { posts: IBlog[] }) => {
 
       <Section color="dark">
         <div className="container">
-          <CalloutsHorizontal callouts={posts.map(post => mapBlogToCallout(post))} title={"Our latest blogs"} />
+          <CalloutsHorizontal callouts={callouts} title={"Our latest blogs"} />
         </div>
       </Section>
       <div className="container">
@@ -191,17 +234,12 @@ const Home = (props: { posts: IBlog[] }) => {
           </p>
         </TextImage>
       </div>
-
       <Section color="dark">
-
-
         <div className="container">
-
-          <CalloutsHorizontal callouts={callouts} title={""} />
-
-
+          <CalloutsHorizontal callouts={posts.map(post => mapBlogToCallout(post))} title={"Our latest blogs"} />
         </div>
       </Section>
+      
       <div className="container">
         <TextImage imageUrl={'/images/home/hands.jpg'} imageText={''} side={"right"} >
           <h3>What Colour Is Your Handprint?</h3>
@@ -211,6 +249,16 @@ const Home = (props: { posts: IBlog[] }) => {
           <p><strong>Discover More - Coming Soon</strong></p>
         </TextImage>
       </div>
+      <Section color="dark">
+
+
+        <div className="container">
+
+          <CalloutsHorizontal callouts={typesShortcuts} title={""} />
+
+
+        </div>
+      </Section>
     </Layout >
 
   )

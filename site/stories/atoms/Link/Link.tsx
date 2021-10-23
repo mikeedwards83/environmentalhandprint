@@ -4,7 +4,7 @@ import { ILink } from "../../../ui/interfaces/ILink";
 
 
 export const Link = (
-    props: { url: string, className?: string, children?:ReactNode, target?:string, noDecoration?:boolean}) => {
+    props: { url?: string, className?: string, children?:ReactNode, target?:string, noDecoration?:boolean}) => {
     const { url, className = "", children ,noDecoration} = props;
 
     return (

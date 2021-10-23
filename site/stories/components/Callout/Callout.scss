@@ -2,9 +2,15 @@
 
 .Callout{
     padding:1rem;
+    padding-bottom: 2rem;
     h3{
         font-weight: bold;
         text-align: left;
     }
     
+    .btn{
+        position: absolute;
+        bottom: 0px;
+
+    }
 }

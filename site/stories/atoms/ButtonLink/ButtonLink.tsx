@@ -6,15 +6,15 @@ import { ILink } from "../../../ui/interfaces/ILink";
 
 export const ButtonLink = (
     props: {
-        url: string,
+        url?: string,
         type?: "Primary" | "PrimaryWhite" | "Secondary",
         size?: "Small" | "Normal" | "Large",
         children: ReactNode,
-        className?:string
+        className?: string
 
     }) => {
 
-    const { url, children, type = "Primary", size = "Normal", className="" } = props;
+    const { url, children, type = "Primary", size = "Normal", className = "" } = props;
     const [typeClass, setTypeClass] = useState("btn-primary");
     const [sizeClass, setSizeClass] = useState("");
 
@@ -55,7 +55,11 @@ export const ButtonLink = (
     }, [size])
 
     return (
-        <a href={url} className={`btn ${typeClass} ${sizeClass} ${className}`}> {children}</a>
+        <>
+            {url && <a href={url} className={`btn ${typeClass} ${sizeClass} ${className}`}> {children}</a>}
+            {!url && <span className={`btn ${typeClass} ${sizeClass} ${className} btn-disabled`} > {children}</span>}
+        </>
+
     )
 
 }

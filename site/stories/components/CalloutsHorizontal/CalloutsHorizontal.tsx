@@ -6,8 +6,8 @@ import Callout, { ICallout } from "../Callout/Callout";
 
 const CalloutsHorizontal = (props: {
   className?: string
-  title?:string,
-  callouts:ICallout []
+  title?: string,
+  callouts: ICallout[]
 }) => {
 
   const {
@@ -15,6 +15,16 @@ const CalloutsHorizontal = (props: {
     title,
     callouts
   } = props;
+
+  let width = "col-lg-4";
+  switch (callouts.length) {
+    case 4:
+      width = "col-lg-3";
+      break;
+    case 3:
+      width = "col-lg-4";
+      break;
+  }
 
   return (
     <div className={`CalloutHorizontal ${className}`}>
@@ -27,7 +37,7 @@ const CalloutsHorizontal = (props: {
           </div>
         </div>
         <div className="row  tt-fg-white callout-cards justify-content-center" style={{ fontSize: "1.2rem" }}>
-          {callouts && callouts.map(callout => <Callout callout={callout} className="col-12 col-lg-4" />)}
+          {callouts && callouts.map(callout => <Callout callout={callout} className={`col-12 ${width}`} />)}
         </div>
       </div>
     </div>

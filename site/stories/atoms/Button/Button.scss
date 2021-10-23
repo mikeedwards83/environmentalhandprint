@@ -2,17 +2,32 @@
 
 .btn {
     &.btn-primary {
-        @include button-variant($white, $brand-lg, $brand-lg)
+        @include button-variant($white, $brand-lg, $brand-lg);
     }
     &.btn-primary-white {
-        @include button-variant($white, $brand-lg, $white)
+        @include button-variant($white, $brand-lg, $white);
     }
-    &.btn-link{
-        color:$brand-lg;
-        
-        &:hover{
-            color:$brand-dg;
+    &.btn-link {
+        color: $brand-lg;
+
+        &:hover {
+            color: $brand-dg;
         }
     }
-    
+    &.btn-disabled {
+        cursor: default;
+        &.btn-link {
+            &:hover {
+                background-color: $brand-lg;
+            }
+        }
+    }
+}
+
+.dark {
+    .btn {
+        &.btn-primary-white {
+            @include button-variant($white, $brand-btn-dark, $white);
+        }
+    }
 }
