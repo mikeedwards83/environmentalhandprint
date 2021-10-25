@@ -11,6 +11,7 @@ import { ILink } from "../../../ui/interfaces/ILink";
 import { faOtter, faTree, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { Constants } from "../../../Contants";
+import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 config.autoAddCss = false;
 
 export const Layout = (props: { children?: ReactNode }) => {
@@ -51,6 +52,14 @@ export const Layout = (props: { children?: ReactNode }) => {
     linkBlog
   ]
 
+  const secondLinks:ILink[] =[
+    {
+      url: "/bepositive",
+      icon: faThumbsUp,
+      text:"Be Positive"
+    },
+  ]
+
   const socialLinks:ILink[] =[
     {
       url: Constants.socialMedia.instagram.url,
@@ -79,7 +88,8 @@ export const Layout = (props: { children?: ReactNode }) => {
             title="Environmental Handprint"
             logo="/images/logo-horizontal.svg"
             links1={headerLinks}
-            links2={socialLinks}
+            links2={secondLinks}
+            links3={socialLinks}
           />
           <div className="Layout-Content">
             {children}

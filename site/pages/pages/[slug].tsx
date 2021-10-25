@@ -50,8 +50,12 @@ const Article = (props: { page: IPage, content: string }) => {
                 title={page.title}
                 className="col-md-8 offset-md-2"
             />
-            <div className="container pt-5">
-                <Markdown >{content}</Markdown>
+            <div className="container pt-5 ">
+                <div className="row">
+                    <div className="col-lg-8 offset-lg-2">
+                        <Markdown >{content}</Markdown>
+                    </div>
+                </div>
             </div>
         </Layout>
     );

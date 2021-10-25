@@ -12,9 +12,10 @@ export const PageHeader = (props: {
     title: string,
     links1: ILink[]
     links2?: ILink[]
+    links3?: ILink[]
 }) => {
 
-    const { logo, title, links1, links2 } = props;
+    const { logo, title, links1, links2 , links3} = props;
 
     const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -107,7 +108,21 @@ export const PageHeader = (props: {
                             )}
                         </>
                         }
+                        {links3 && <>
+                            <hr />
 
+                            {links3.map(link =>
+
+                                <li className="nav-item pr-3" key={link.url}>
+
+                                    <a className="nav-link" href={link.url} >
+                                        {link.icon && <FontAwesomeIcon icon={link.icon} />}
+                                        {link.text}
+                                    </a>
+                                </li>
+                            )}
+                        </>
+                        }
                     </ul>
                     <hr />
                     <div className="text-center">
