@@ -47,7 +47,7 @@ const individual = () => {
 
                     </p>
                     <blockquote>
-                        "Green is good"
+                    &#34;Green is good&#34;
                         <span>- Gordon The Gecko</span>
                     </blockquote>
                     <p>
@@ -95,7 +95,7 @@ const individual = () => {
 
                     </h2>
                     <p>
-                        By joining the growing network of companies who are striving to do better, you help to grow the Handprint community and the larger it grows, the easier it will become for other companies to grow their Handprint. Eventually this web of connected companies will magnify each other's effect into a huge impact.
+                        By joining the growing network of companies who are striving to do better, you help to grow the Handprint community and the larger it grows, the easier it will become for other companies to grow their Handprint. Eventually this web of connected companies will magnify each other&#39;s effect into a huge impact.
 
                     </p>
                     <p>
