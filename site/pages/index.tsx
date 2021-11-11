@@ -62,7 +62,10 @@ const Home = (props: { posts: IBlog[] }) => {
     {
       title: "Your business handprint",
       text: "Grow the handprint of your company and customers.",
-
+      link:{
+        text: "Discover More",
+        url:"/business",
+      },
       icon: faKiwiBird
     },
     {

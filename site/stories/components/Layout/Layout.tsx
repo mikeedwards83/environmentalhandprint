@@ -8,7 +8,7 @@ import ShareThis from "../ShareThis/ShareThis";
 import CookieBanner from "../CookieBanner/CookieBanner";
 import GoogleAnalytics from "../GoogleAnalytics/GoogleAnalytics";
 import { ILink } from "../../../ui/interfaces/ILink";
-import { faOtter, faTree, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faKiwiBird, faOtter, faTree, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { Constants } from "../../../Contants";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
@@ -48,6 +48,11 @@ export const Layout = (props: { children?: ReactNode }) => {
       text:"Your Handprint",
       url:"/individual",
       icon:faOtter
+    },
+    {
+      text:"Business Handprint",
+      url:"/business",
+      icon:faKiwiBird
     },
     linkBlog
   ]
