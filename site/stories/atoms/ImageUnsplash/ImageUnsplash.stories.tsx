@@ -13,5 +13,8 @@ const Template: ComponentStory<typeof ImageUnsplash> = (args) => <ImageUnsplash 
 
 export const Default = Template.bind({});
 Default.args = {  
+    src:"https://images.unsplash.com/photo-1615420510251-083da7739330",
+    width:500,
+    height:600
 };
 
