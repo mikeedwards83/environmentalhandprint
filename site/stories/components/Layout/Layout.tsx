@@ -59,9 +59,9 @@ export const Layout = (props: { children?: ReactNode }) => {
 
   const secondLinks:ILink[] =[
     {
-      url: "/bepositive",
+      url: "/pages/glossary",
       icon: faThumbsUp,
-      text:"Be Positive"
+      text:"The Glossary"
     },
   ]
 
