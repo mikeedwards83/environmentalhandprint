@@ -37,7 +37,7 @@ const CalloutsHorizontal = (props: {
           </div>
         </div>
         <div className="row  callout-cards justify-content-center" style={{ fontSize: "1.2rem" }}>
-          {callouts && callouts.map(callout => <Callout callout={callout} className={`col-12 ${width}`} />)}
+          {callouts && callouts.map(callout => <Callout key={callout.title} callout={callout} className={`col-12 ${width}`} />)}
         </div>
       </div>
     </div>

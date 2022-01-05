@@ -30,7 +30,7 @@ export const QuickLinks = (props: { links: IQuickLink[] }) => {
             <div className="container">
                 <div className="row ">
 
-                    {links.map(x => <QuickLink link={x} />)}
+                    {links.map(x => <QuickLink key={x.title} link={x} />)}
 
                 </div>
             </div>

@@ -11,7 +11,7 @@ import { ILink } from "../../../ui/interfaces/ILink";
 import { faKiwiBird, faOtter, faTree, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { Constants } from "../../../Contants";
-import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
+import { faHandPaper, faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 config.autoAddCss = false;
 
 export const Layout = (props: { children?: ReactNode }) => {
@@ -59,10 +59,16 @@ export const Layout = (props: { children?: ReactNode }) => {
 
   const secondLinks:ILink[] =[
     {
+      url: "/colours",
+      icon: faHandPaper,
+      text:"Handprint Colours"
+    },
+    {
       url: "/pages/glossary",
       icon: faThumbsUp,
       text:"The Glossary"
     },
+  
   ]
 
   const socialLinks:ILink[] =[

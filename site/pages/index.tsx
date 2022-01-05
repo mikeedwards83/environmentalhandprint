@@ -103,7 +103,10 @@ const Home = (props: { posts: IBlog[] }) => {
       children: <p className="lead">
         Grow the handprint of your company and customers.
       </p>,
-      
+       link:{
+        text:"Discover More",
+        url:"/business"
+      }
     },
     {
       title: "Community Handprints",
@@ -249,7 +252,8 @@ const Home = (props: { posts: IBlog[] }) => {
           <p className="lead">
             Your handprint comes in a range of different colours. Find out which colour your action is and how it makes a difference.
           </p>
-          <p><strong>Discover More - Coming Soon</strong></p>
+          <ButtonLink url='/colours' 
+          >Find Your Colour</ButtonLink>
         </TextImage>
       </div>
       <Section color="dark">

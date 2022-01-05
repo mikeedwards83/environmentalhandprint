@@ -1,18 +1,22 @@
 @import "./../../../styles/Include.scss";
 
-.Section{
+.Section {
     padding-top: 50px;
     padding-bottom: 50px;
 
     margin-top: 50px;
     margin-bottom: 50px;
 
-    &.dark{
+    &.dark {
         background-color: $brand-lg;
-        color:white;
+        color: white;
+        a {
+            color: white;
+            &:hover {
+                                color: $brand-dg;
+            }
+        }
     }
-    &.light{
-
-    }
-
+    
+    
 }

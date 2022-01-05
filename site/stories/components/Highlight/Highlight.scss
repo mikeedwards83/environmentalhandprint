@@ -1,0 +1,53 @@
+@import "./../../../styles/Include.scss";
+
+.Highlight{
+    border:solid $brand-lg 5px;
+    padding-bottom: 2rem !important;
+    border-radius: 5px;
+    
+    &.blue{
+        border-color: $brand-blue;
+    }
+    &.blue{
+        border-color:$brand-blue;
+    }
+    &.grey{
+        border-color:$brand-grey;
+    }
+    &.red{
+        border-color:$brand-red;
+    }
+    &.orange{
+        border-color:$brand-orange;
+    }
+    &.yellow{
+        border-color:$brand-yellow;
+    }
+    &.darkGreen{
+        border-color:$brand-dg;
+    }
+    &.lightGreen{
+        border-color:$brand-lg;
+    }
+    &.black{
+        border-color:$brand-black;
+    }
+
+
+    .Highlight-Footer {
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+}
+
+
+.dark{
+    .Highlight{
+        border:solid $white 5px;
+    
+    } 
+}

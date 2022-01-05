@@ -1,5 +1,9 @@
 import { ReactNode } from "react"
 
+
+
+export type ColourOptions = "lightGreen"|"darkGreen"|"grey"|"yellow"|"blue"|"orange"|"black";
+
 const Colours = (props: {
   className?: string
 }) => {
@@ -33,7 +37,9 @@ const Colours = (props: {
         <div className="Color brand-orange">
           <span className="Color-Code">#fd6a02</span>
         </div>
-
+        <div className="Color brand-blue">
+          <span className="Color-Code">#258593</span>
+        </div>
       </div>
     </div>
   )

@@ -18,6 +18,32 @@ h3{
     padding-bottom: 0.5rem;
 }
 
+h1,h2,h3,h4,h5{
+    &.blue{
+        color:$brand-blue;
+    }
+    &.grey{
+        color:$brand-grey;
+    }
+    &.red{
+        color:$brand-red;
+    }
+    &.orange{
+        color:$brand-orange;
+    }
+    &.yellow{
+        color:$brand-yellow;
+    }
+    &.darkGreen{
+        color:$brand-dg;
+    }
+    &.lightGreen{
+        color:$brand-lg;
+    }
+    &.black{
+        color:$brand-black;
+    }
+}
 
 a{
     color:$brand-lg;
@@ -61,4 +87,8 @@ blockquote{
         margin-left:2rem;
         margin-top: 1rem;
     }
+}
+
+.small{
+    font-size: 0.75em;
 }
