@@ -61,10 +61,10 @@ const colours = () => {
                             title: "Organisations",
                             description: `Some great organisations in helping to protect the land we live on.`,
                             features: [
-                                <Link url="https://www.greenpeace.org.uk/">Greenpeace</Link>,
-                                <Link url="https://extinctionrebellion.uk/">Extinction Rebellion</Link>,
-                                <Link url="https://www.greenpeace.org.uk/">Greenpeace</Link>,
-                                <Link url="https://www.rainforest-alliance.org/">Rainforest Alliance</Link>,
+                                <Link key="1" url="https://www.greenpeace.org.uk/">Greenpeace</Link>,
+                                <Link key="2" url="https://extinctionrebellion.uk/">Extinction Rebellion</Link>,
+                                <Link key="3" url="https://www.greenpeace.org.uk/">Greenpeace</Link>,
+                                <Link key="4" url="https://www.rainforest-alliance.org/">Rainforest Alliance</Link>,
                             ],
                             footer: "We are always looking for more great organisations to shout about. Let us know what you are doing."
                         }
@@ -75,7 +75,7 @@ const colours = () => {
                 <TextImage side="left" imageText="Blue Handprint" imageUrl="/images/Handprint-Blue.jpg">
                     <h2 className="blue">Blue Handprint</h2>
                     <p className="lead">
-                        Are you helping to make the world's oceans, seas, rivers cleaner and bring life back to the deeps?
+                        Are you helping to make the world&#39;s oceans, seas, rivers cleaner and bring life back to the deeps?
                     </p>
                 </TextImage>
                 <HighlightsThreeColumn
@@ -108,9 +108,9 @@ const colours = () => {
                             title: "Organisations",
                             description: `Some great organisations in helping to protect the water we need to live.`,
                             features: [
-                                <Link url="https://www.plasticbusters.org/">Plastic Busters</Link>,
-                                <Link url="https://sasshop.org.uk/">Surfers Against Sewage</Link>,
-                                <Link url="https://seashepherd.org/">Sea Shepard</Link>,
+                                <Link key="1" url="https://www.plasticbusters.org/">Plastic Busters</Link>,
+                                <Link key="2" url="https://sasshop.org.uk/">Surfers Against Sewage</Link>,
+                                <Link key="3" url="https://seashepherd.org/">Sea Shepard</Link>,
                             ],
                             footer: "We are always looking for more great organisations to shout about. Let us know what you are doing."
                         }
@@ -152,8 +152,8 @@ const colours = () => {
                             title: "Organisations",
                             description: `Some great organisations in helping to protect the air we breath.`,
                             features: [
-                                <Link url="https://onetreeplanted.org/">One Tree Planted</Link>,
-                                <Link url="https://www.ecosia.org/?c=en">Ecosia</Link>
+                                <Link key="1" url="https://onetreeplanted.org/">One Tree Planted</Link>,
+                                <Link key="2" url="https://www.ecosia.org/?c=en">Ecosia</Link>
 
                             ],
                             footer: "We are always looking for more great organisations to shout about. Let us know what you are doing."
@@ -197,7 +197,7 @@ const colours = () => {
                             title: "Organisations",
                             description: `Some great organisations in helping people to live clean and secure lives.`,
                             features: [
-                                <Link url="https://www.treeaid.org">Tree Aid</Link>,
+                                <Link key="1" url="https://www.treeaid.org">Tree Aid</Link>,
                             ],
                             footer: "We are always looking for more great organisations to shout about. Let us know what you are doing."
                         }
@@ -237,7 +237,7 @@ const colours = () => {
                             title: "Organisations",
                             description: `Some great organisations in helping people to live clean and secure lives.`,
                             features: [
-                                "We aren't aware of any, but if you know of any, or are one please let us know."
+                                `We aren't aware of any, but if you know of any, or are one please let us know.`
                             ],
                             footer: "We are always looking for more great organisations to shout about. Let us know what you are doing."
                         }
