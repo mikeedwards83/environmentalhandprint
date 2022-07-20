@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { CSSProperties, useEffect, useState } from "react";
 import { ScreenSize, useBootstrapSize } from "../../../hooks/useBootstrapSize";
 import { ImageUnsplash } from "../ImageUnsplash/ImageUnsplash";
